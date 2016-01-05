@@ -16,6 +16,7 @@
 		72B7A0001C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */; };
 		72B7A0021C3BBF8200723465 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0011C3BBF8200723465 /* BasicCell.swift */; };
 		72B7A0041C3BC22600723465 /* SpringyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */; };
+		72B7A0061C3BC6D700723465 /* SpringyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionVeiwDataSource.swift; sourceTree = "<group>"; };
 		72B7A0011C3BBF8200723465 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionViewController.swift; sourceTree = "<group>"; };
+		72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				72B7A0011C3BBF8200723465 /* BasicCell.swift */,
 				72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */,
 				72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */,
+				72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */,
 				7264A5541C3B711700DC577B /* Main.storyboard */,
 				7264A5571C3B711700DC577B /* Assets.xcassets */,
 				7264A5591C3B711700DC577B /* LaunchScreen.storyboard */,
@@ -151,6 +154,7 @@
 				7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */,
 				72B79FFE1C3BB61300723465 /* EntryDataSource.swift in Sources */,
 				72B7A0041C3BC22600723465 /* SpringyCollectionViewController.swift in Sources */,
+				72B7A0061C3BC6D700723465 /* SpringyCollectionViewLayout.swift in Sources */,
 				72B7A0001C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,
 			);
