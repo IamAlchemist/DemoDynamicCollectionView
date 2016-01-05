@@ -16,6 +16,8 @@ class SpringyCollectionViewLayout : UICollectionViewFlowLayout {
     
     var visibleIndexPathsSet : Set<NSIndexPath> = []
     
+    var latestDelta : CGFloat = 0
+    
     override init() {
         super.init()
         
@@ -63,6 +65,8 @@ class SpringyCollectionViewLayout : UICollectionViewFlowLayout {
     override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
         let scrollView = collectionView! as UIScrollView
         let delta = newBounds.origin.y - scrollView.bounds.origin.y
+        
+        latestDelta = delta
         
         let touchLocation = (collectionView?.panGestureRecognizer.locationInView(collectionView))!
         
