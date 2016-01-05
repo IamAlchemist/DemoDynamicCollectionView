@@ -9,9 +9,15 @@
 import UIKit
 
 class EntryTableViewController: UITableViewController {
+    
+    var entryDataSource : EntryDataSource?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        entryDataSource = EntryDataSource()
+        
+        self.tableView.dataSource = entryDataSource as? UITableViewDataSource
     }
 }
 
