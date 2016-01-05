@@ -50,7 +50,7 @@ class SpringyCollectionViewLayout : UICollectionViewFlowLayout {
         
         let noLongerVisibleBehaviors = dynamicAnimator.behaviors.filter { (behavior) -> Bool in
             if let attachBehavior = behavior as? UIAttachmentBehavior {
-                return indexPathsInVisibleRect.contains((attachBehavior.items.first as! UICollectionViewLayoutAttributes).indexPath)
+                return !indexPathsInVisibleRect.contains((attachBehavior.items.first as! UICollectionViewLayoutAttributes).indexPath)
             }
             else{
                 return false
@@ -61,6 +61,10 @@ class SpringyCollectionViewLayout : UICollectionViewFlowLayout {
             dynamicAnimator.removeBehavior(behavior)
             visibleIndexPathsSet.remove(((behavior as! UIAttachmentBehavior).items.first as! UICollectionViewLayoutAttributes).indexPath)
         }
+        
+        let newlyVisibleItems = attributesInVisibleRect.filter({ (item) in
+            return !visibleIndexPathsSet.contains(item.indexPath)
+        })
         
 //        if (dynamicAnimator.behaviors.count == 0) {
 //            for item in items {
