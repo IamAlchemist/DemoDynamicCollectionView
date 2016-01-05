@@ -87,4 +87,9 @@ class SpringyCollectionViewLayout : UICollectionViewFlowLayout {
         
         return false
     }
+    
+    func resetLayout() {
+        dynamicAnimator.removeAllBehaviors()
+        prepareLayout()
+    }
 }
