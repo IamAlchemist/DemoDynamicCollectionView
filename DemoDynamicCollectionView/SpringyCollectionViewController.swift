@@ -17,4 +17,11 @@ class SpringyCollectionViewController : UICollectionViewController {
         
         collectionView?.dataSource = dataSource
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        collectionViewLayout.invalidateLayout()
+    }
+    
 }
