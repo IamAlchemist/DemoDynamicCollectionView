@@ -22,5 +22,11 @@ class EntryTableViewController: UITableViewController {
         let segueIdentifier = entryDataSource.segueIdentifierWithIndentifier(indexPath)
         performSegueWithIdentifier(segueIdentifier, sender: self)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let springyViewController = segue.destinationViewController as? SpringyCollectionViewController {
+            springyViewController.dataSource = SpringyCollectionViewDataSource()
+        }
+    }
 }
 

@@ -8,6 +8,18 @@
 
 import UIKit
 
-//class SpringyCollectionViewDataSource : NSObject, UICollectionViewDataSource {
-//    
-//}
+class SpringyCollectionViewDataSource : NSObject, UICollectionViewDataSource {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 12
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SpringyCollectionViewCell", forIndexPath: indexPath)
+        
+        cell.backgroundColor = UIColor.orangeColor()
+        
+        return cell
+    }
+}
