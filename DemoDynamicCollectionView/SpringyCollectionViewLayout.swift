@@ -39,19 +39,39 @@ class SpringyCollectionViewLayout : UICollectionViewFlowLayout {
     override func prepareLayout() {
         super.prepareLayout()
         
-        let contentSize = (collectionView?.contentSize)!
-        let items = super.layoutAttributesForElementsInRect(CGRect(x: 0, y: 0, width: contentSize.width, height: contentSize.height))!
+        let visibleRect = CGRectInset(CGRect(origin: collectionView!.bounds.origin, size: collectionView!.bounds.size), -100, -100)
+        let attributesInVisibleRect = super.layoutAttributesForElementsInRect(visibleRect)!
         
-        if (dynamicAnimator.behaviors.count == 0) {
-            for item in items {
-                let behavior = UIAttachmentBehavior(item: item, attachedToAnchor: item.center)
-                behavior.length = 0
-                behavior.damping = 0.8
-                behavior.frequency = 1
-                
-                dynamicAnimator.addBehavior(behavior)
+        var indexPathsInVisibleRect : Set<NSIndexPath> = Set()
+        
+        for layoutAttribute in attributesInVisibleRect {
+            indexPathsInVisibleRect.insert(layoutAttribute.indexPath)
+        }
+        
+        let noLongerVisibleBehaviors = dynamicAnimator.behaviors.filter { (behavior) -> Bool in
+            if let attachBehavior = behavior as? UIAttachmentBehavior {
+                return indexPathsInVisibleRect.contains((attachBehavior.items.first as! UICollectionViewLayoutAttributes).indexPath)
+            }
+            else{
+                return false
             }
         }
+        
+        for behavior in noLongerVisibleBehaviors {
+            dynamicAnimator.removeBehavior(behavior)
+            visibleIndexPathsSet.remove(((behavior as! UIAttachmentBehavior).items.first as! UICollectionViewLayoutAttributes).indexPath)
+        }
+        
+//        if (dynamicAnimator.behaviors.count == 0) {
+//            for item in items {
+//                let behavior = UIAttachmentBehavior(item: item, attachedToAnchor: item.center)
+//                behavior.length = 0
+//                behavior.damping = 0.8
+//                behavior.frequency = 1
+//                
+//                dynamicAnimator.addBehavior(behavior)
+//            }
+//        }
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
