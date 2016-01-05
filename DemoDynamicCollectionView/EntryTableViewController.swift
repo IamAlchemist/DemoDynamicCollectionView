@@ -19,7 +19,7 @@ class EntryTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let segueIdentifier = entryDataSource.data[indexPath.row] + "Segue"
+        let segueIdentifier = entryDataSource.segueIdentifierWithIndentifier(indexPath)
         performSegueWithIdentifier(segueIdentifier, sender: self)
     }
 }

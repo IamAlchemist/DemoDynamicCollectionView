@@ -13,6 +13,8 @@
 		7264A5581C3B711700DC577B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7264A5571C3B711700DC577B /* Assets.xcassets */; };
 		7264A55B1C3B711700DC577B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7264A5591C3B711700DC577B /* LaunchScreen.storyboard */; };
 		72B79FFE1C3BB61300723465 /* EntryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B79FFD1C3BB61300723465 /* EntryDataSource.swift */; };
+		72B7A0001C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */; };
+		72B7A0021C3BBF8200723465 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0011C3BBF8200723465 /* BasicCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		7264A55A1C3B711700DC577B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7264A55C1C3B711700DC577B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B79FFD1C3BB61300723465 /* EntryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryDataSource.swift; sourceTree = "<group>"; };
+		72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionVeiwDataSource.swift; sourceTree = "<group>"; };
+		72B7A0011C3BBF8200723465 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				7264A5501C3B711700DC577B /* AppDelegate.swift */,
 				7264A5521C3B711700DC577B /* EntryTableViewController.swift */,
 				72B79FFD1C3BB61300723465 /* EntryDataSource.swift */,
+				72B7A0011C3BBF8200723465 /* BasicCell.swift */,
+				72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */,
 				7264A5541C3B711700DC577B /* Main.storyboard */,
 				7264A5571C3B711700DC577B /* Assets.xcassets */,
 				7264A5591C3B711700DC577B /* LaunchScreen.storyboard */,
@@ -138,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B7A0021C3BBF8200723465 /* BasicCell.swift in Sources */,
 				7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */,
 				72B79FFE1C3BB61300723465 /* EntryDataSource.swift in Sources */,
+				72B7A0001C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

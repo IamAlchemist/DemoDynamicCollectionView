@@ -21,8 +21,12 @@ class EntryDataSource: NSObject, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("BasicCell", forIndexPath: indexPath)
         
-        cell.textLabel?.text = data[indexPath.row]
+        cell.configForBasicCell(data[indexPath.row])
         
         return cell
+    }
+    
+    func segueIdentifierWithIndentifier(indexPath : NSIndexPath) -> String {
+        return data[indexPath.row] + "Segue"
     }
 }
