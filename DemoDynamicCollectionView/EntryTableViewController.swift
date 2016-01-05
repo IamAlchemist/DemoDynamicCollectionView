@@ -10,14 +10,17 @@ import UIKit
 
 class EntryTableViewController: UITableViewController {
     
-    var entryDataSource : EntryDataSource?
+    var entryDataSource = EntryDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        entryDataSource = EntryDataSource()
-        
-        self.tableView.dataSource = entryDataSource as? UITableViewDataSource
+        self.tableView.dataSource = entryDataSource as UITableViewDataSource
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let segueIdentifier = entryDataSource.data[indexPath.row] + "Segue"
+        performSegueWithIdentifier(segueIdentifier, sender: self)
     }
 }
 
