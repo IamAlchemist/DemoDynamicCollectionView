@@ -17,6 +17,7 @@
 		72B7A0021C3BBF8200723465 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0011C3BBF8200723465 /* BasicCell.swift */; };
 		72B7A0041C3BC22600723465 /* SpringyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */; };
 		72B7A0061C3BC6D700723465 /* SpringyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */; };
+		72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0251C3CEE5D00723465 /* SimpleDynamicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		72B7A0011C3BBF8200723465 /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionViewController.swift; sourceTree = "<group>"; };
 		72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionViewLayout.swift; sourceTree = "<group>"; };
+		72B7A0251C3CEE5D00723465 /* SimpleDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDynamicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		7264A54F1C3B711700DC577B /* DemoDynamicCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				72B7A0251C3CEE5D00723465 /* SimpleDynamicViewController.swift */,
 				7264A5501C3B711700DC577B /* AppDelegate.swift */,
 				7264A5521C3B711700DC577B /* EntryTableViewController.swift */,
 				72B79FFD1C3BB61300723465 /* EntryDataSource.swift */,
@@ -156,6 +159,7 @@
 				72B7A0041C3BC22600723465 /* SpringyCollectionViewController.swift in Sources */,
 				72B7A0061C3BC6D700723465 /* SpringyCollectionViewLayout.swift in Sources */,
 				72B7A0001C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift in Sources */,
+				72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

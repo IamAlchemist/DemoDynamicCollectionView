@@ -41,6 +41,7 @@
                     <connections>
                         <segue destination="YxQ-7c-sHZ" kind="show" identifier="NewtownianSegue" id="3Hn-IQ-imv"/>
                         <segue destination="HlA-nf-J8G" kind="show" identifier="SpringySegue" id="qWp-Wv-MVB"/>
+                        <segue destination="OFO-L0-5cP" kind="show" identifier="SimpleDynamicSegue" id="TaI-nT-sId"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6H-WW-nP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,6 +112,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cah-VZ-b85" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1162" y="826"/>
+        </scene>
+        <!--Simple Dynamic View Controller-->
+        <scene sceneID="9gA-iE-zNB">
+            <objects>
+                <viewController id="OFO-L0-5cP" customClass="SimpleDynamicViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z7h-5B-4cv"/>
+                        <viewControllerLayoutGuide type="bottom" id="jAg-H4-bHS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hEG-KR-Pmy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-lz-F4l">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="9j3-VD-9Xs"/>
+                                    <constraint firstAttribute="height" constant="100" id="SUM-15-2Zv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="ZxZ-lz-F4l" firstAttribute="centerY" secondItem="hEG-KR-Pmy" secondAttribute="centerY" id="GOS-Cr-CsJ"/>
+                            <constraint firstItem="ZxZ-lz-F4l" firstAttribute="centerX" secondItem="hEG-KR-Pmy" secondAttribute="centerX" id="gJF-fb-y0T"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uhh-sD-0Ml" appends="YES" id="NL2-yk-14K"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="squre" destination="ZxZ-lz-F4l" id="a4E-xz-8ri"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzx-u3-8Yc" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="uhh-sD-0Ml">
+                    <connections>
+                        <action selector="handleAttachmentGuesture:" destination="OFO-L0-5cP" id="wLT-b5-z3q"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2742" y="1628"/>
         </scene>
     </scenes>
 </document>
