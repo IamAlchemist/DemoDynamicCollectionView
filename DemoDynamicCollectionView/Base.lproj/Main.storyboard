@@ -51,20 +51,21 @@
         <!--Title-->
         <scene sceneID="mEV-2y-TgM">
             <objects>
-                <collectionViewController id="jYv-hF-uAb" sceneMemberID="viewController">
+                <collectionViewController id="jYv-hF-uAb" customClass="NewtownianCollectionViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zwU-2T-T21">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="GPE-lF-tdk"/>
+                        <collectionViewLayout key="collectionViewLayout" id="GPE-lF-tdk" customClass="NewtownianCollectionViewLayout" customModule="DemoDynamicCollectionView" customModuleProvider="target"/>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewtownianCell" id="1tp-R3-NoV" customClass="NewtownianCell" customModule="DemoDynamicCollectionView" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="64" width="158" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="142"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <size key="customSize" width="158" height="142"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -73,8 +74,16 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Title" id="Lvu-Wv-vcp">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Ovy-ne-Y7N"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0K4-S5-lGZ"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Ovy-ne-Y7N">
+                            <connections>
+                                <action selector="deleteButtonTapped:" destination="jYv-hF-uAb" id="1Um-bV-QfL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0K4-S5-lGZ">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="jYv-hF-uAb" id="ibA-1G-7DB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eu6-Uv-k9D" userLabel="First Responder" sceneMemberID="firstResponder"/>

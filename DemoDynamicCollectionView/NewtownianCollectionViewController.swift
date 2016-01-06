@@ -10,4 +10,8 @@ import UIKit
 
 class NewtownianCollectionViewController : UICollectionViewController {
     
+    @IBAction func addButtonTapped(sender: UIBarButtonItem) {
+    }
+    @IBAction func deleteButtonTapped(sender: UIBarButtonItem) {
+    }
 }
