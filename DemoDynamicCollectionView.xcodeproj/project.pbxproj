@@ -18,6 +18,7 @@
 		72B7A0041C3BC22600723465 /* SpringyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */; };
 		72B7A0061C3BC6D700723465 /* SpringyCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */; };
 		72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0251C3CEE5D00723465 /* SimpleDynamicViewController.swift */; };
+		72B7A0281C3D270400723465 /* NewtownianCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0271C3D270400723465 /* NewtownianCollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionViewController.swift; sourceTree = "<group>"; };
 		72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringyCollectionViewLayout.swift; sourceTree = "<group>"; };
 		72B7A0251C3CEE5D00723465 /* SimpleDynamicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDynamicViewController.swift; sourceTree = "<group>"; };
+		72B7A0271C3D270400723465 /* NewtownianCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianCollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */,
 				72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */,
 				72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */,
+				72B7A0271C3D270400723465 /* NewtownianCollectionViewLayout.swift */,
 				7264A5541C3B711700DC577B /* Main.storyboard */,
 				7264A5571C3B711700DC577B /* Assets.xcassets */,
 				7264A5591C3B711700DC577B /* LaunchScreen.storyboard */,
@@ -161,6 +164,7 @@
 				72B7A0001C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift in Sources */,
 				72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,
+				72B7A0281C3D270400723465 /* NewtownianCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
