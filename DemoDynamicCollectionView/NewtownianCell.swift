@@ -9,5 +9,7 @@
 import UIKit
 
 class NewtownianCell : UICollectionViewCell {
-
+    func configWithImageName(imageName : String){
+        backgroundColor = UIColor.orangeColor()
+    }
 }

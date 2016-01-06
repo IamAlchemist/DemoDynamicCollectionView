@@ -17,7 +17,8 @@ class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource 
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("NewtownianCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("NewtownianCell", forIndexPath: indexPath) as! NewtownianCell
+        cell.configWithImageName(data[indexPath.row])
         return cell;
     }
 }

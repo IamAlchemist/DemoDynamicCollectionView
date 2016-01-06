@@ -10,6 +10,12 @@ import UIKit
 
 class NewtownianCollectionViewController : UICollectionViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        collectionView!.dataSource = NewtownianCollectionViewDataSource(imageNames: [])
+    }
+    
     @IBAction func addButtonTapped(sender: UIBarButtonItem) {
     }
     @IBAction func deleteButtonTapped(sender: UIBarButtonItem) {
