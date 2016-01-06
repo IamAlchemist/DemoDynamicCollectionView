@@ -66,16 +66,34 @@ class SpringyCollectionViewLayout : UICollectionViewFlowLayout {
             return !visibleIndexPathsSet.contains(item.indexPath)
         })
         
-//        if (dynamicAnimator.behaviors.count == 0) {
-//            for item in items {
-//                let behavior = UIAttachmentBehavior(item: item, attachedToAnchor: item.center)
-//                behavior.length = 0
-//                behavior.damping = 0.8
-//                behavior.frequency = 1
-//                
-//                dynamicAnimator.addBehavior(behavior)
-//            }
-//        }
+        let touchLocation = collectionView!.panGestureRecognizer.locationInView(collectionView)
+        
+        for layoutAttribute in newlyVisibleItems {
+            var center = layoutAttribute.center
+            let springyBehavior = UIAttachmentBehavior(item: layoutAttribute, attachedToAnchor: center)
+            
+            springyBehavior.length = 0
+            springyBehavior.damping = 0.8
+            springyBehavior.frequency = 1.0
+            
+            if !CGPointEqualToPoint(CGPointZero, touchLocation) {
+                let yDist = fabsf(Float(touchLocation.y - springyBehavior.anchorPoint.y))
+                let xDist = fabsf(Float(touchLocation.x - springyBehavior.anchorPoint.x))
+                let resistance = CGFloat((yDist + xDist) / 1500)
+                
+                if (latestDelta < 0) {
+                    center.y += max(latestDelta, latestDelta * resistance)
+                }
+                else{
+                    center.y += min(latestDelta, latestDelta * resistance)
+                }
+                
+                layoutAttribute.center = center
+                
+                dynamicAnimator.addBehavior(springyBehavior)
+                visibleIndexPathsSet.insert(layoutAttribute.indexPath)
+            }
+        }
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
