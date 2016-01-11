@@ -10,7 +10,7 @@ import UIKit
 
 class EntryDataSource: NSObject, UITableViewDataSource {
     
-    var data = ["Springy", "Newtownian", "SimpleDynamic"]
+    var data = ["Springy", "Newtownian", "SimpleDynamic", "Calendar"]
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

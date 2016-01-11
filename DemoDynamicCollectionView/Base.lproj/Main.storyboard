@@ -25,7 +25,7 @@
                                             <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -42,6 +42,7 @@
                         <segue destination="HlA-nf-J8G" kind="show" identifier="SpringySegue" id="qWp-Wv-MVB"/>
                         <segue destination="OFO-L0-5cP" kind="show" identifier="SimpleDynamicSegue" id="TaI-nT-sId"/>
                         <segue destination="jYv-hF-uAb" kind="show" identifier="NewtownianSegue" id="cXU-SY-tbB"/>
+                        <segue destination="8tY-St-k6y" kind="show" identifier="CalendarSegue" id="gDe-Jd-OcF"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6H-WW-nP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -118,6 +119,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZD-bp-RUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1974" y="1595"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="PQw-D8-wLF">
+            <objects>
+                <collectionViewController id="8tY-St-k6y" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kBB-5m-ok1">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="srj-L3-gEz">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7E6-kU-ERE">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8tY-St-k6y" id="pRs-pO-Bos"/>
+                            <outlet property="delegate" destination="8tY-St-k6y" id="XSZ-11-m31"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBQ-N4-H1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fi7-H7-JGB">
