@@ -33,6 +33,12 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
         return CGPoint(x: CGRectGetMidX(collectionView!.bounds), y: 64)
     }
     
+    override func prepareLayout() {
+        super.prepareLayout()
+        
+        
+    }
+    
     override func prepareForCollectionViewUpdates(updateItems: [UICollectionViewUpdateItem]) {
         super.prepareForCollectionViewUpdates(updateItems)
         

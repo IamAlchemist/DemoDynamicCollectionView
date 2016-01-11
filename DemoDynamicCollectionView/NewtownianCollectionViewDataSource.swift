@@ -18,7 +18,12 @@ class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource 
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("NewtownianCell", forIndexPath: indexPath) as! NewtownianCell
-        cell.configWithImageName(data[indexPath.row])
+        let index = Int.init(data[indexPath.row]) == nil ? 0 : Int.init(data[indexPath.row])!
+        cell.configWithImageName("\(index % 5)")
         return cell;
+    }
+    
+    func increaseItem() {
+        data.append("\(data.count + 1)")
     }
 }

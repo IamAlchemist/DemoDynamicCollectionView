@@ -23,5 +23,4 @@ class SpringyCollectionViewController : UICollectionViewController {
         
         collectionViewLayout.invalidateLayout()
     }
-    
 }
