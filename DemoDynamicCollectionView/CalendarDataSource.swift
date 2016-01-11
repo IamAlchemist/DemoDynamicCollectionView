@@ -10,7 +10,7 @@ import UIKit
 
 class CalendarDataSource : NSObject, UICollectionViewDataSource {
     
-    var configureCell : ((cell: CalendarEventCell, indexPath: NSIndexPath, event: CalendarEvent) -> Void)?
+    var configureCell : ((cell: CalendarEventCell, event: CalendarEvent) -> Void)?
     
     var configureHeaderView : ((headerView : CalendarHeaderView, kind : String, indexPath : NSIndexPath) -> Void)?
     
@@ -58,7 +58,7 @@ class CalendarDataSource : NSObject, UICollectionViewDataSource {
         
         let event = events[indexPath.item]
 
-        configureCell?(cell: cell, indexPath: indexPath, event: event)
+        configureCell?(cell: cell, event: event)
         
         return cell
     }

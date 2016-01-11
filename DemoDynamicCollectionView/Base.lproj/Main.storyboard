@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="1974" y="1595"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Calendar View Controller-->
         <scene sceneID="PQw-D8-wLF">
             <objects>
-                <collectionViewController id="8tY-St-k6y" sceneMemberID="viewController">
+                <collectionViewController id="8tY-St-k6y" customClass="CalendarViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kBB-5m-ok1">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

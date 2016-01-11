@@ -8,6 +8,31 @@
 
 import UIKit
 
-class CalendarViewController : UICollectionViewController {
+class CalendarViewController : UICollectionViewController
+{
+    var calendarDataSource = CalendarDataSource()
     
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        let nib = UINib(nibName: "CalendarHeaderView", bundle: nil)
+        collectionView?.registerNib(nib, forSupplementaryViewOfKind: "DayHeaderView", withReuseIdentifier: "CalendarHeaderView")
+        collectionView?.registerNib(nib, forSupplementaryViewOfKind: "HourHeaderView", withReuseIdentifier: "CalendarHeaderView")
+        
+        calendarDataSource.configureCell = { (cell, event) in
+            cell.title.text = event.title
+        }
+        
+        calendarDataSource.configureHeaderView = { (headerView, kind, indexPath) in
+            switch kind {
+            case "DayHeaderView":
+                headerView.title.text = "Day \(indexPath.item + 1)"
+            case "HourHeaderView":
+                headerView.title.text = String(format: "%2d:00", indexPath.item + 1)
+            default:
+                break
+            }
+        }
+    }
 }
