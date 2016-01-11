@@ -87,9 +87,9 @@ class WeekCalendarLayout : UICollectionViewLayout
         return layoutAttributes
     }
     
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
-        return true
-    }
+//    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+//        return true
+//    }
     
     
     // MARK: - helper
