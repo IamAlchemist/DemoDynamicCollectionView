@@ -33,6 +33,9 @@
                 <constraint firstItem="dqC-Q9-CaP" firstAttribute="centerX" secondItem="KJS-zq-B06" secondAttribute="centerX" id="hCg-rH-2r2"/>
                 <constraint firstItem="tx0-Jc-fcs" firstAttribute="centerX" secondItem="KJS-zq-B06" secondAttribute="centerX" id="iZO-OL-hDm"/>
             </constraints>
+            <connections>
+                <outlet property="title" destination="dqC-Q9-CaP" id="l8w-lk-Ysf"/>
+            </connections>
             <point key="canvasLocation" x="348" y="434"/>
         </collectionReusableView>
     </objects>

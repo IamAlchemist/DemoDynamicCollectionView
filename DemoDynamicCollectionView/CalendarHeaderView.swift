@@ -9,4 +9,5 @@
 import UIKit
 
 class CalendarHeaderView : UICollectionReusableView {
+    @IBOutlet weak var title: UILabel!
 }
