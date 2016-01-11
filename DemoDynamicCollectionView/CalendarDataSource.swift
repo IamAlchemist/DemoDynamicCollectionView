@@ -23,8 +23,9 @@ class CalendarDataSource : NSObject, UICollectionViewDataSource {
     
     func generateSampleData()
     {
-        for _ in 1..<20 {
-            let event = SampleCalendarEvent.randomEvent();
+        for idx in 0..<20 {
+            var event = SampleCalendarEvent.randomEvent();
+            event.title = "E \(idx)"
             events.append(event)
         }
     }

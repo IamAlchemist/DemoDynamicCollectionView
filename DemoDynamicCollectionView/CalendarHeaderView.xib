@@ -13,7 +13,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx0-Jc-fcs">
-                    <rect key="frame" x="0.0" y="48" width="201" height="1"/>
+                    <rect key="frame" x="0.0" y="49" width="201" height="1"/>
                     <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="Knc-ay-RFr"/>
@@ -28,7 +28,7 @@
             </subviews>
             <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="tx0-Jc-fcs" secondAttribute="bottom" constant="1" id="RVm-Jr-odh"/>
+                <constraint firstAttribute="bottom" secondItem="tx0-Jc-fcs" secondAttribute="bottom" id="RVm-Jr-odh"/>
                 <constraint firstItem="dqC-Q9-CaP" firstAttribute="top" secondItem="KJS-zq-B06" secondAttribute="topMargin" id="cy7-pc-GCF"/>
                 <constraint firstItem="tx0-Jc-fcs" firstAttribute="width" secondItem="KJS-zq-B06" secondAttribute="width" id="dIM-IY-pYw"/>
                 <constraint firstItem="tx0-Jc-fcs" firstAttribute="centerX" secondItem="KJS-zq-B06" secondAttribute="centerX" id="iZO-OL-hDm"/>
