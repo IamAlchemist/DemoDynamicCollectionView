@@ -65,7 +65,7 @@ class CalendarDataSource : NSObject, UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView
     {
-        let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier:"HeaderView", forIndexPath: indexPath) as! CalendarHeaderView
+        let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier:"CalendarHeaderView", forIndexPath: indexPath) as! CalendarHeaderView
         
         configureHeaderView?(headerView: headerView, kind: kind, indexPath: indexPath)
         

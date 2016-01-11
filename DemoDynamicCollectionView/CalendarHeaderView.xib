@@ -20,23 +20,24 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqC-Q9-CaP">
-                    <rect key="frame" x="79" y="8" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="4" y="8" width="29" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="tx0-Jc-fcs" secondAttribute="bottom" constant="1" id="RVm-Jr-odh"/>
                 <constraint firstItem="dqC-Q9-CaP" firstAttribute="top" secondItem="KJS-zq-B06" secondAttribute="topMargin" id="cy7-pc-GCF"/>
                 <constraint firstItem="tx0-Jc-fcs" firstAttribute="width" secondItem="KJS-zq-B06" secondAttribute="width" id="dIM-IY-pYw"/>
-                <constraint firstItem="dqC-Q9-CaP" firstAttribute="centerX" secondItem="KJS-zq-B06" secondAttribute="centerX" id="hCg-rH-2r2"/>
                 <constraint firstItem="tx0-Jc-fcs" firstAttribute="centerX" secondItem="KJS-zq-B06" secondAttribute="centerX" id="iZO-OL-hDm"/>
+                <constraint firstItem="dqC-Q9-CaP" firstAttribute="leading" secondItem="KJS-zq-B06" secondAttribute="leading" constant="4" id="n3P-Js-nW1"/>
             </constraints>
             <connections>
                 <outlet property="title" destination="dqC-Q9-CaP" id="l8w-lk-Ysf"/>
             </connections>
-            <point key="canvasLocation" x="348" y="434"/>
+            <point key="canvasLocation" x="347.5" y="434"/>
         </collectionReusableView>
     </objects>
 </document>

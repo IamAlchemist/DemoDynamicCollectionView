@@ -15,6 +15,8 @@ class CalendarViewController : UICollectionViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+
+        collectionView?.dataSource = calendarDataSource
         
         let nib = UINib(nibName: "CalendarHeaderView", bundle: nil)
         collectionView?.registerNib(nib, forSupplementaryViewOfKind: "DayHeaderView", withReuseIdentifier: "CalendarHeaderView")
