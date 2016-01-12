@@ -12,6 +12,8 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     
     let kItemSize : CGFloat = 100
     
+    var attachmentBehaviors = [NSIndexPath : UIAttachmentBehavior]()
+    
     lazy var dynamicAnimator : UIDynamicAnimator = { [unowned self] in
         let result = UIDynamicAnimator(collectionViewLayout: (self as UICollectionViewFlowLayout))
         result.addBehavior(self.gravityBehavior)
@@ -33,28 +35,54 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
         return CGPoint(x: CGRectGetMidX(collectionView!.bounds), y: 64)
     }
     
-    override func prepareLayout() {
-        super.prepareLayout()
+    func indexPathsFromDataSource() -> Set<NSIndexPath> {
+        var indexPaths = Set<NSIndexPath>()
         
         let datasource = collectionView!.dataSource as! NewtownianCollectionViewDataSource
         
-        for (idx,_) in datasource.data.enumerate() {
+        for idx in datasource.data {
             let indexPath = NSIndexPath(forItem: idx, inSection: 0)
+            indexPaths.insert(indexPath)
+        }
+        
+        return indexPaths
+    }
+    
+    func indexPathsFromAttachmentBehaviors() -> Set<NSIndexPath> {
+        return Set<NSIndexPath>(attachmentBehaviors.keys)
+    }
+    
+    override func prepareLayout() {
+        super.prepareLayout()
+        
+        let newlyVisibleIndexPaths = indexPathsFromDataSource().subtract(indexPathsFromAttachmentBehaviors())
+        let nolongerVisibleIndexPaths = indexPathsFromAttachmentBehaviors().subtract(indexPathsFromDataSource())
+        
+        for indexPath in nolongerVisibleIndexPaths {
+            let behavior = attachmentBehaviors[indexPath]!
+            attachmentBehaviors[indexPath] = nil
             
-            if dynamicAnimator.layoutAttributesForCellAtIndexPath(indexPath) == nil {
+            let attributes = dynamicAnimator.layoutAttributesForCellAtIndexPath(indexPath)!
             
-                let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
-                attributes.frame = CGRect(x: CGRectGetMaxX(collectionView!.frame) + kItemSize, y: 200, width: kItemSize, height: kItemSize)
+            dynamicAnimator.removeBehavior(behavior)
+            gravityBehavior.removeItem(attributes)
+            collisionBehavior.removeItem(attributes)
+        }
+        
+        for indexPath in newlyVisibleIndexPaths {
+            let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
+            attributes.frame = CGRect(x: CGRectGetMaxX(collectionView!.frame) + kItemSize, y: 200, width: kItemSize, height: kItemSize)
                 
-                let attachmentBehavior = UIAttachmentBehavior(item: attributes, attachedToAnchor: attachmentPoint())
-                attachmentBehavior.length = 200
-                attachmentBehavior.damping = 0.4
-                attachmentBehavior.frequency = 1.0
+            let attachmentBehavior = UIAttachmentBehavior(item: attributes, attachedToAnchor: attachmentPoint())
+            attachmentBehavior.length = 200
+            attachmentBehavior.damping = 0.4
+            attachmentBehavior.frequency = 1.0
+            
+            attachmentBehaviors[indexPath] = attachmentBehavior
                 
-                dynamicAnimator.addBehavior(attachmentBehavior)
-                gravityBehavior.addItem(attributes)
-                collisionBehavior.addItem(attributes)
-            }
+            dynamicAnimator.addBehavior(attachmentBehavior)
+            gravityBehavior.addItem(attributes)
+            collisionBehavior.addItem(attributes)
         }
     }
     

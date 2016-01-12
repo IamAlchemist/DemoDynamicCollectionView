@@ -10,7 +10,7 @@ import UIKit
 
 class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource {
     
-    var data = [String]()
+    var data = [Int]()
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -18,12 +18,21 @@ class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource 
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("NewtownianCell", forIndexPath: indexPath) as! NewtownianCell
-        let index = Int.init(data[indexPath.row]) == nil ? 0 : Int.init(data[indexPath.row])!
+        let index = data[indexPath.item]
         cell.configWithImageName("\(index % 5)")
         return cell;
     }
     
+    func decreaseItem() {
+        data.removeFirst()
+    }
+    
     func increaseItem() {
-        data.append("\(data.count + 1)")
+        if data.count == 0 {
+            data.append(0)
+        }
+        else {
+            data.append(data[data.count - 1] + 1)
+        }
     }
 }
