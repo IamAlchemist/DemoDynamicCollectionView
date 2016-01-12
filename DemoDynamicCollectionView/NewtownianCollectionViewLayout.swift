@@ -36,18 +36,14 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     override func prepareLayout() {
         super.prepareLayout()
         
+        let datasource = collectionView!.dataSource as! NewtownianCollectionViewDataSource
         
-    }
-    
-    override func prepareForCollectionViewUpdates(updateItems: [UICollectionViewUpdateItem]) {
-        super.prepareForCollectionViewUpdates(updateItems)
-        
-        for item in updateItems
-        {
-            if item.updateAction == .Insert
-            {
-                let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: item.indexPathAfterUpdate!)
-                
+        for (idx,_) in datasource.data.enumerate() {
+            let indexPath = NSIndexPath(forItem: idx, inSection: 0)
+            
+            if dynamicAnimator.layoutAttributesForCellAtIndexPath(indexPath) == nil {
+            
+                let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
                 attributes.frame = CGRect(x: CGRectGetMaxX(collectionView!.frame) + kItemSize, y: 200, width: kItemSize, height: kItemSize)
                 
                 let attachmentBehavior = UIAttachmentBehavior(item: attributes, attachedToAnchor: attachmentPoint())

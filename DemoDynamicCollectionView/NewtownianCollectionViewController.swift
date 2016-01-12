@@ -21,7 +21,7 @@ class NewtownianCollectionViewController : UICollectionViewController {
     
     @IBAction func addButtonTapped(sender: UIBarButtonItem) {
         collectionViewDatasource?.increaseItem()
-        collectionView?.collectionViewLayout.invalidateLayout()
+        collectionView?.reloadData()
     }
     
     @IBAction func deleteButtonTapped(sender: UIBarButtonItem) {
