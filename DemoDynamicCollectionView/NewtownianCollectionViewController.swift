@@ -25,5 +25,7 @@ class NewtownianCollectionViewController : UICollectionViewController {
     }
     
     @IBAction func deleteButtonTapped(sender: UIBarButtonItem) {
+        collectionViewDatasource?.decreaseItem()
+        collectionView?.reloadData()
     }
 }

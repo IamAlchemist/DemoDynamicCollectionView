@@ -24,7 +24,9 @@ class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource 
     }
     
     func decreaseItem() {
-        data.removeFirst()
+        if data.count > 0 {
+            data.removeFirst()
+        }
     }
     
     func increaseItem() {
