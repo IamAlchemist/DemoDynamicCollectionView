@@ -12,7 +12,7 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     
     let kItemSize : CGFloat = 100
     
-    var attachmentBehaviors = [NSIndexPath : UIAttachmentBehavior]()
+    var attachmentBehaviors = [Int : UIAttachmentBehavior]()
     
     lazy var dynamicAnimator : UIDynamicAnimator = { [unowned self] in
         let result = UIDynamicAnimator(collectionViewLayout: (self as UICollectionViewFlowLayout))
@@ -35,42 +35,55 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
         return CGPoint(x: CGRectGetMidX(collectionView!.bounds), y: 64)
     }
     
-    func indexPathsFromDataSource() -> Set<NSIndexPath> {
-        var indexPaths = Set<NSIndexPath>()
+    func idsFromDataSource() -> Set<Int> {
+        var ids = Set<Int>()
         
         let datasource = collectionView!.dataSource as! NewtownianCollectionViewDataSource
         
-        for idx in datasource.data {
-            let indexPath = NSIndexPath(forItem: idx, inSection: 0)
-            indexPaths.insert(indexPath)
+        for id in datasource.data {
+            ids.insert(id)
         }
         
-        return indexPaths
+        return ids
     }
     
-    func indexPathsFromAttachmentBehaviors() -> Set<NSIndexPath> {
-        return Set<NSIndexPath>(attachmentBehaviors.keys)
+    func idsFromAttachmentBehaviors() -> Set<Int> {
+        return Set<Int>(attachmentBehaviors.keys)
+    }
+    
+    func fixTheIndexPathForLayoutAttributes() {
+        let dataSource = collectionView!.dataSource as! NewtownianCollectionViewDataSource
+        for behavior in attachmentBehaviors.values {
+            let attribute = behavior.items.first as! NewtownianLayoutAttributes
+            let row = dataSource.data.indexOf(attribute.id)!
+            attribute.indexPath = NSIndexPath(forItem: row, inSection: 0)
+        }
+    }
+    
+    func layoutAttributesInAttachmentBehaviorForId(id : Int) -> NewtownianLayoutAttributes? {
+        let behavior = attachmentBehaviors[id]
+        return behavior
     }
     
     override func prepareLayout() {
         super.prepareLayout()
         
-        let newlyVisibleIndexPaths = indexPathsFromDataSource().subtract(indexPathsFromAttachmentBehaviors())
-        let nolongerVisibleIndexPaths = indexPathsFromAttachmentBehaviors().subtract(indexPathsFromDataSource())
+        let newlyVisibleIds = idsFromDataSource().subtract(idsFromAttachmentBehaviors())
+        let nolongerVisibleIds = idsFromAttachmentBehaviors().subtract(idsFromDataSource())
         
-        for indexPath in nolongerVisibleIndexPaths {
-            let behavior = attachmentBehaviors[indexPath]!
-            attachmentBehaviors[indexPath] = nil
+        for id in nolongerVisibleIds {
+            let behavior = attachmentBehaviors[id]!
+            attachmentBehaviors[id] = nil
             
-            let attributes = dynamicAnimator.layoutAttributesForCellAtIndexPath(indexPath)!
-            
+            let attributes = layoutAttributesInAttachmentBehaviorForId(id)!
             dynamicAnimator.removeBehavior(behavior)
             gravityBehavior.removeItem(attributes)
             collisionBehavior.removeItem(attributes)
         }
         
-        for indexPath in newlyVisibleIndexPaths {
-            let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
+        for id in newlyVisibleIds {
+            let attributes = NewtownianLayoutAttributes(forCellWithIndexPath: NSIndexPath(forItem: id, inSection: 0))
+            attributes.id = id
             attributes.frame = CGRect(x: CGRectGetMaxX(collectionView!.frame) + kItemSize, y: 200, width: kItemSize, height: kItemSize)
                 
             let attachmentBehavior = UIAttachmentBehavior(item: attributes, attachedToAnchor: attachmentPoint())
@@ -78,12 +91,14 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
             attachmentBehavior.damping = 0.4
             attachmentBehavior.frequency = 1.0
             
-            attachmentBehaviors[indexPath] = attachmentBehavior
+            attachmentBehaviors[id] = attachmentBehavior
                 
             dynamicAnimator.addBehavior(attachmentBehavior)
             gravityBehavior.addItem(attributes)
             collisionBehavior.addItem(attributes)
         }
+        
+        fixTheIndexPathForLayoutAttributes()
     }
     
     override func collectionViewContentSize() -> CGSize {
@@ -91,7 +106,22 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        return dynamicAnimator.itemsInRect(rect) as? [UICollectionViewLayoutAttributes]
+        return (dynamicAnimator.itemsInRect(rect) as! [UICollectionViewLayoutAttributes])
+//        let dataSource = collectionView?.dataSource as! NewtownianCollectionViewDataSource
+//        
+//        var layoutAttributes = [UICollectionViewLayoutAttributes]()
+//        
+//        var string = "index paths : "
+//        for attributes in (dynamicAnimator.itemsInRect(rect) as! [UICollectionViewLayoutAttributes]){
+//            if dataSource.data.contains(attributes.indexPath.row) {
+//                layoutAttributes.append(attributes)
+//                string += "\(attributes.indexPath.row),"
+//            }
+//        }
+//        
+//        print(string)
+//
+//        return layoutAttributes
     }
     
     override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {

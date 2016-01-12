@@ -22,6 +22,7 @@
 		72B7A02A1C3D35B500723465 /* NewtownianCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A0291C3D35B500723465 /* NewtownianCollectionViewController.swift */; };
 		72B7A02C1C3D363800723465 /* NewtownianCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A02B1C3D363800723465 /* NewtownianCollectionViewDataSource.swift */; };
 		72B7A02E1C3D36FA00723465 /* NewtownianCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A02D1C3D36FA00723465 /* NewtownianCell.swift */; };
+		72C35A671C44EB540024C240 /* NewtownianLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C35A661C44EB540024C240 /* NewtownianLayoutAttributes.swift */; };
 		72E2D6931C438F36001D4F26 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6921C438F36001D4F26 /* CalendarViewController.swift */; };
 		72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */; };
 		72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */; };
@@ -50,6 +51,7 @@
 		72B7A0291C3D35B500723465 /* NewtownianCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianCollectionViewController.swift; sourceTree = "<group>"; };
 		72B7A02B1C3D363800723465 /* NewtownianCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		72B7A02D1C3D36FA00723465 /* NewtownianCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianCell.swift; sourceTree = "<group>"; };
+		72C35A661C44EB540024C240 /* NewtownianLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianLayoutAttributes.swift; sourceTree = "<group>"; };
 		72E2D6921C438F36001D4F26 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
 		72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */,
 				72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */,
 				72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */,
+				72C35A661C44EB540024C240 /* NewtownianLayoutAttributes.swift */,
 				72B7A0271C3D270400723465 /* NewtownianCollectionViewLayout.swift */,
 				72B7A0291C3D35B500723465 /* NewtownianCollectionViewController.swift */,
 				72B7A02D1C3D36FA00723465 /* NewtownianCell.swift */,
@@ -206,6 +209,7 @@
 				72E2D6991C439145001D4F26 /* CalendarEvent.swift in Sources */,
 				72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */,
 				72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */,
+				72C35A671C44EB540024C240 /* NewtownianLayoutAttributes.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,
 				72B7A02A1C3D35B500723465 /* NewtownianCollectionViewController.swift in Sources */,
 				72B7A0281C3D270400723465 /* NewtownianCollectionViewLayout.swift in Sources */,
