@@ -65,9 +65,23 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="158" height="142"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8mN-ef-4N9">
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="142"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="8mN-ef-4N9" secondAttribute="trailing" constant="-8" id="GSu-mL-lav"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="8mN-ef-4N9" secondAttribute="bottom" constant="-8" id="KYP-50-3N2"/>
+                                    <constraint firstItem="8mN-ef-4N9" firstAttribute="top" secondItem="1tp-R3-NoV" secondAttribute="topMargin" constant="-8" id="h8e-WF-Xys"/>
+                                    <constraint firstItem="8mN-ef-4N9" firstAttribute="leading" secondItem="1tp-R3-NoV" secondAttribute="leadingMargin" constant="-8" id="sgU-Fp-0el"/>
+                                </constraints>
                                 <size key="customSize" width="158" height="142"/>
+                                <connections>
+                                    <outlet property="imageView" destination="8mN-ef-4N9" id="g8H-cR-Ym9"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
