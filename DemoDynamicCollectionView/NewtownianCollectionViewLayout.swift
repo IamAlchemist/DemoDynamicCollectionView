@@ -62,7 +62,7 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     
     func layoutAttributesInAttachmentBehaviorForId(id : Int) -> NewtownianLayoutAttributes? {
         let behavior = attachmentBehaviors[id]
-        return behavior
+        return (behavior?.items.first as? NewtownianLayoutAttributes)
     }
     
     override func prepareLayout() {
@@ -73,12 +73,12 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
         
         for id in nolongerVisibleIds {
             let behavior = attachmentBehaviors[id]!
-            attachmentBehaviors[id] = nil
-            
             let attributes = layoutAttributesInAttachmentBehaviorForId(id)!
             dynamicAnimator.removeBehavior(behavior)
             gravityBehavior.removeItem(attributes)
             collisionBehavior.removeItem(attributes)
+            
+            attachmentBehaviors[id] = nil
         }
         
         for id in newlyVisibleIds {
