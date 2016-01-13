@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64FB30491C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FB30481C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift */; };
 		7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5501C3B711700DC577B /* AppDelegate.swift */; };
 		7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5521C3B711700DC577B /* EntryTableViewController.swift */; };
 		7264A5561C3B711700DC577B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7264A5541C3B711700DC577B /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64FB30481C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianAttachmentBehavior.swift; sourceTree = "<group>"; };
 		7264A54D1C3B711700DC577B /* DemoDynamicCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDynamicCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7264A5501C3B711700DC577B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7264A5521C3B711700DC577B /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */,
 				72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */,
 				72C35A661C44EB540024C240 /* NewtownianLayoutAttributes.swift */,
+				64FB30481C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift */,
 				72B7A0271C3D270400723465 /* NewtownianCollectionViewLayout.swift */,
 				72B7A0291C3D35B500723465 /* NewtownianCollectionViewController.swift */,
 				72B7A02D1C3D36FA00723465 /* NewtownianCell.swift */,
@@ -208,6 +211,7 @@
 				72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */,
 				72E2D6991C439145001D4F26 /* CalendarEvent.swift in Sources */,
 				72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */,
+				64FB30491C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift in Sources */,
 				72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */,
 				72C35A671C44EB540024C240 /* NewtownianLayoutAttributes.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,

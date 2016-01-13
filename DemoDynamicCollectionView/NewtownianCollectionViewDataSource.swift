@@ -9,6 +9,13 @@
 import UIKit
 
 class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource {
+    struct Generator {
+        static var number : Int = 0
+        static func getNumber() -> Int {
+            number++
+            return number
+        }
+    }
     
     var data = [Int]()
     
@@ -30,11 +37,6 @@ class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource 
     }
     
     func increaseItem() {
-        if data.count == 0 {
-            data.append(0)
-        }
-        else {
-            data.append(data[data.count - 1] + 1)
-        }
+        data.append(Generator.getNumber())
     }
 }

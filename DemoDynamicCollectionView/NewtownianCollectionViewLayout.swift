@@ -17,7 +17,7 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     lazy var dynamicAnimator : UIDynamicAnimator = { [unowned self] in
         let result = UIDynamicAnimator(collectionViewLayout: (self as UICollectionViewFlowLayout))
         result.addBehavior(self.gravityBehavior)
-//        result.addBehavior(self.collisionBehavior)
+        result.addBehavior(self.collisionBehavior)
         return result
     }()
     
@@ -83,12 +83,11 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
         change = newlyVisibleIds.count > 0 || nolongerVisibleIds.count > 0
         
         for id in nolongerVisibleIds {
-            print("no longer visible : \(id)")
             let behavior = attachmentBehaviors[id]!
             let attributes = layoutAttributesInAttachmentBehaviorForId(id)!
             dynamicAnimator.removeBehavior(behavior)
             gravityBehavior.removeItem(attributes)
-//            collisionBehavior.removeItem(attributes)
+            collisionBehavior.removeItem(attributes)
             
             attachmentBehaviors[id] = nil
         }
@@ -98,22 +97,17 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
             attributes.id = id
             attributes.frame = CGRect(x: CGRectGetMaxX(collectionView!.frame) + kItemSize, y: 200, width: kItemSize, height: kItemSize)
                 
-            let attachmentBehavior = UIAttachmentBehavior(item: attributes, attachedToAnchor: attachmentPoint())
+            let attachmentBehavior = NewtownianAttachmentBehavior(item: attributes, attachedToAnchor: attachmentPoint())
             attachmentBehavior.length = 200
             attachmentBehavior.damping = 0.4
             attachmentBehavior.frequency = 1.0
             
             attachmentBehaviors[id] = attachmentBehavior
             
-            print("---------------------")
-            for behavior in dynamicAnimator.behaviors {
-                printBehaviorHierachy(behavior, indent: "==>")
-            }
-            
             dynamicAnimator.addBehavior(attachmentBehavior)
 
             gravityBehavior.addItem(attributes)
-//            collisionBehavior.addItem(attributes)
+            collisionBehavior.addItem(attributes)
         }
         
         if change {
