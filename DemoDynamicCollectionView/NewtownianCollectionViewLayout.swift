@@ -17,7 +17,7 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     lazy var dynamicAnimator : UIDynamicAnimator = { [unowned self] in
         let result = UIDynamicAnimator(collectionViewLayout: (self as UICollectionViewFlowLayout))
         result.addBehavior(self.gravityBehavior)
-        result.addBehavior(self.collisionBehavior)
+//        result.addBehavior(self.collisionBehavior)
         return result
     }()
     
@@ -52,9 +52,6 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     }
     
     func fixTheIndexPathForLayoutAttributes() {
-        print("behaviors : \(dynamicAnimator.behaviors.count)")
-        print("gravity : \(gravityBehavior.items.count)")
-        print("collision : \(collisionBehavior.items.count)")
         let dataSource = collectionView!.dataSource as! NewtownianCollectionViewDataSource
         for behavior in attachmentBehaviors.values {
             let attribute = behavior.items.first as! NewtownianLayoutAttributes
@@ -66,6 +63,13 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     func layoutAttributesInAttachmentBehaviorForId(id : Int) -> NewtownianLayoutAttributes? {
         let behavior = attachmentBehaviors[id]
         return (behavior?.items.first as? NewtownianLayoutAttributes)
+    }
+    
+    func printBehaviorHierachy(behavior : UIDynamicBehavior, indent : String) {
+        print(indent + ":\(behavior)")
+        for behavior in behavior.childBehaviors {
+            printBehaviorHierachy(behavior, indent: indent + "  ")
+        }
     }
     
     override func prepareLayout() {
@@ -84,7 +88,7 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
             let attributes = layoutAttributesInAttachmentBehaviorForId(id)!
             dynamicAnimator.removeBehavior(behavior)
             gravityBehavior.removeItem(attributes)
-            collisionBehavior.removeItem(attributes)
+//            collisionBehavior.removeItem(attributes)
             
             attachmentBehaviors[id] = nil
         }
@@ -100,10 +104,16 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
             attachmentBehavior.frequency = 1.0
             
             attachmentBehaviors[id] = attachmentBehavior
-                
+            
+            print("---------------------")
+            for behavior in dynamicAnimator.behaviors {
+                printBehaviorHierachy(behavior, indent: "==>")
+            }
+            
             dynamicAnimator.addBehavior(attachmentBehavior)
+
             gravityBehavior.addItem(attributes)
-            collisionBehavior.addItem(attributes)
+//            collisionBehavior.addItem(attributes)
         }
         
         if change {
@@ -125,21 +135,6 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
             }
         }
         return result
-//        let dataSource = collectionView?.dataSource as! NewtownianCollectionViewDataSource
-//        
-//        var layoutAttributes = [UICollectionViewLayoutAttributes]()
-//        
-//        var string = "index paths : "
-//        for attributes in (dynamicAnimator.itemsInRect(rect) as! [UICollectionViewLayoutAttributes]){
-//            if dataSource.data.contains(attributes.indexPath.row) {
-//                layoutAttributes.append(attributes)
-//                string += "\(attributes.indexPath.row),"
-//            }
-//        }
-//        
-//        print(string)
-//
-//        return layoutAttributes
     }
     
     override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
