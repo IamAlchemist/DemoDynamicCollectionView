@@ -52,6 +52,9 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     }
     
     func fixTheIndexPathForLayoutAttributes() {
+        print("behaviors : \(dynamicAnimator.behaviors.count)")
+        print("gravity : \(gravityBehavior.items.count)")
+        print("collision : \(collisionBehavior.items.count)")
         let dataSource = collectionView!.dataSource as! NewtownianCollectionViewDataSource
         for behavior in attachmentBehaviors.values {
             let attribute = behavior.items.first as! NewtownianLayoutAttributes
@@ -68,10 +71,15 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
     override func prepareLayout() {
         super.prepareLayout()
         
+        var change = false
+        
         let newlyVisibleIds = idsFromDataSource().subtract(idsFromAttachmentBehaviors())
         let nolongerVisibleIds = idsFromAttachmentBehaviors().subtract(idsFromDataSource())
         
+        change = newlyVisibleIds.count > 0 || nolongerVisibleIds.count > 0
+        
         for id in nolongerVisibleIds {
+            print("no longer visible : \(id)")
             let behavior = attachmentBehaviors[id]!
             let attributes = layoutAttributesInAttachmentBehaviorForId(id)!
             dynamicAnimator.removeBehavior(behavior)
@@ -98,15 +106,25 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
             collisionBehavior.addItem(attributes)
         }
         
-        fixTheIndexPathForLayoutAttributes()
+        if change {
+            fixTheIndexPathForLayoutAttributes()
+        }
     }
+
     
     override func collectionViewContentSize() -> CGSize {
         return collectionView!.bounds.size
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        return (dynamicAnimator.itemsInRect(rect) as! [UICollectionViewLayoutAttributes])
+        var result = [UICollectionViewLayoutAttributes]()
+        
+        for attributes in (dynamicAnimator.itemsInRect(rect) as! [NewtownianLayoutAttributes]) {
+            if attachmentBehaviors[attributes.id] != nil {
+                result.append(attributes)
+            }
+        }
+        return result
 //        let dataSource = collectionView?.dataSource as! NewtownianCollectionViewDataSource
 //        
 //        var layoutAttributes = [UICollectionViewLayoutAttributes]()
