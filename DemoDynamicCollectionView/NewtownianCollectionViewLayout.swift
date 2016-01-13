@@ -72,6 +72,10 @@ class NewtownianCollectionViewLayout : UICollectionViewFlowLayout {
         }
     }
     
+    override class func layoutAttributesClass() -> AnyClass {
+        return NewtownianLayoutAttributes.self
+    }
+    
     override func prepareLayout() {
         super.prepareLayout()
         

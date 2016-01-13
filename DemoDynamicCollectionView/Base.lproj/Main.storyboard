@@ -44,6 +44,7 @@
                         <segue destination="OFO-L0-5cP" kind="show" identifier="SimpleDynamicSegue" id="TaI-nT-sId"/>
                         <segue destination="jYv-hF-uAb" kind="show" identifier="NewtownianSegue" id="cXU-SY-tbB"/>
                         <segue destination="8tY-St-k6y" kind="show" identifier="CalendarSegue" id="gDe-Jd-OcF"/>
+                        <segue destination="TFE-3s-fe5" kind="show" identifier="pinterestSegue" id="hr7-Nk-MJA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6H-WW-nP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -241,6 +242,14 @@
                 </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2742" y="1628"/>
+        </scene>
+        <!--Pinterest-->
+        <scene sceneID="UeX-6p-gVI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Pinterest" id="TFE-3s-fe5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onD-ad-7xm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1951" y="-20"/>
         </scene>
     </scenes>
 </document>
