@@ -9,4 +9,13 @@
 import UIKit
 
 class PinterestViewController : UICollectionViewController {
+    
+    var dataSource = PinterestDataSource()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        collectionView?.dataSource = dataSource
+        (collectionView?.collectionViewLayout as! PinterestViewLayout).delegate = self
+    }
 }

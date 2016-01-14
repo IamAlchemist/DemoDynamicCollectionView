@@ -15,6 +15,7 @@
 		64FB305B1C4760ED00DBE79F /* PinterestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FB305A1C4760ED00DBE79F /* PinterestDataSource.swift */; };
 		64FB305D1C47615200DBE79F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FB305C1C47615200DBE79F /* Photo.swift */; };
 		64FB305F1C4762F000DBE79F /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64FB305E1C4762F000DBE79F /* Photos.plist */; };
+		64FB30611C477C2F00DBE79F /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FB30601C477C2F00DBE79F /* Photos.xcassets */; };
 		7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5501C3B711700DC577B /* AppDelegate.swift */; };
 		7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5521C3B711700DC577B /* EntryTableViewController.swift */; };
 		7264A5561C3B711700DC577B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7264A5541C3B711700DC577B /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		64FB305A1C4760ED00DBE79F /* PinterestDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestDataSource.swift; sourceTree = "<group>"; };
 		64FB305C1C47615200DBE79F /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		64FB305E1C4762F000DBE79F /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		64FB30601C477C2F00DBE79F /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 		7264A54D1C3B711700DC577B /* DemoDynamicCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDynamicCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7264A5501C3B711700DC577B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7264A5521C3B711700DC577B /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		64FB304F1C46930400DBE79F /* other */ = {
 			isa = PBXGroup;
 			children = (
+				64FB30601C477C2F00DBE79F /* Photos.xcassets */,
 				7264A5501C3B711700DC577B /* AppDelegate.swift */,
 				7264A5541C3B711700DC577B /* Main.storyboard */,
 				72E2D6A01C43A019001D4F26 /* CalendarHeaderView.xib */,
@@ -263,6 +266,7 @@
 				64FB30521C46941C00DBE79F /* Pinterest.storyboard in Resources */,
 				72E2D6A11C43A019001D4F26 /* CalendarHeaderView.xib in Resources */,
 				7264A5581C3B711700DC577B /* Assets.xcassets in Resources */,
+				64FB30611C477C2F00DBE79F /* Photos.xcassets in Resources */,
 				7264A5561C3B711700DC577B /* Main.storyboard in Resources */,
 				64FB305F1C4762F000DBE79F /* Photos.plist in Resources */,
 			);
