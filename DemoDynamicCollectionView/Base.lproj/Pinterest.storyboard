@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Pinterest View Controller-->
@@ -23,19 +22,19 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="dcA-On-ZeG">
-                                            <rect key="frame" x="8" y="8" width="176" height="131"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="192" height="131"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="131" id="y2N-yg-zWe"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZQe-jK-sdy">
-                                            <rect key="frame" x="8" y="143" width="176" height="17"/>
+                                            <rect key="frame" x="4" y="135" width="184" height="17"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="12"/>
                                             <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrn-2N-d95">
-                                            <rect key="frame" x="8" y="160" width="176" height="57"/>
+                                            <rect key="frame" x="4" y="152" width="184" height="14"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="10"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -45,15 +44,14 @@
                                 </view>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="dcA-On-ZeG" firstAttribute="top" secondItem="vI7-xd-gIQ" secondAttribute="topMargin" id="4Fx-al-QH2"/>
+                                    <constraint firstItem="dcA-On-ZeG" firstAttribute="top" secondItem="vI7-xd-gIQ" secondAttribute="top" id="4Fx-al-QH2"/>
                                     <constraint firstItem="ZQe-jK-sdy" firstAttribute="width" secondItem="Qrn-2N-d95" secondAttribute="width" id="4t9-Vx-hvG"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="dcA-On-ZeG" secondAttribute="trailing" id="Kew-5j-CwG"/>
-                                    <constraint firstItem="Qrn-2N-d95" firstAttribute="bottom" secondItem="vI7-xd-gIQ" secondAttribute="bottomMargin" id="TiK-ec-KvO"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Qrn-2N-d95" secondAttribute="trailing" id="aHj-D5-mEc"/>
-                                    <constraint firstItem="Qrn-2N-d95" firstAttribute="leading" secondItem="vI7-xd-gIQ" secondAttribute="leadingMargin" id="iN9-xo-Ow3"/>
+                                    <constraint firstItem="ZQe-jK-sdy" firstAttribute="centerX" secondItem="Qrn-2N-d95" secondAttribute="centerX" id="7MT-zK-Hql"/>
+                                    <constraint firstAttribute="trailing" secondItem="dcA-On-ZeG" secondAttribute="trailing" id="Kew-5j-CwG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qrn-2N-d95" secondAttribute="trailing" constant="4" id="aHj-D5-mEc"/>
+                                    <constraint firstItem="Qrn-2N-d95" firstAttribute="leading" secondItem="vI7-xd-gIQ" secondAttribute="leading" constant="4" id="iN9-xo-Ow3"/>
                                     <constraint firstItem="Qrn-2N-d95" firstAttribute="top" secondItem="ZQe-jK-sdy" secondAttribute="bottom" id="qCp-Wq-Kyz"/>
-                                    <constraint firstItem="ZQe-jK-sdy" firstAttribute="centerX" secondItem="Qrn-2N-d95" secondAttribute="centerX" id="shS-YN-ssz"/>
-                                    <constraint firstItem="dcA-On-ZeG" firstAttribute="leading" secondItem="vI7-xd-gIQ" secondAttribute="leadingMargin" id="szt-Hs-4Ph"/>
+                                    <constraint firstItem="dcA-On-ZeG" firstAttribute="leading" secondItem="vI7-xd-gIQ" secondAttribute="leading" id="szt-Hs-4Ph"/>
                                     <constraint firstItem="ZQe-jK-sdy" firstAttribute="top" secondItem="dcA-On-ZeG" secondAttribute="bottom" constant="4" id="zKe-Cb-ACq"/>
                                 </constraints>
                                 <size key="customSize" width="192" height="225"/>
