@@ -21,7 +21,7 @@ class Photo {
     
     convenience init(dictionary: NSDictionary){
         let caption = dictionary["Caption"] as! String
-        let comment = dictionary["Commnet"] as! String
+        let comment = dictionary["Comment"] as! String
         let photo = dictionary["Photo"] as! String
         let image = UIImage(named: photo)
         self.init(caption: caption, comment: comment, image: image!)

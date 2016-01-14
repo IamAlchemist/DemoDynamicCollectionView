@@ -44,7 +44,7 @@
                         <segue destination="OFO-L0-5cP" kind="show" identifier="SimpleDynamicSegue" id="TaI-nT-sId"/>
                         <segue destination="jYv-hF-uAb" kind="show" identifier="NewtownianSegue" id="cXU-SY-tbB"/>
                         <segue destination="8tY-St-k6y" kind="show" identifier="CalendarSegue" id="gDe-Jd-OcF"/>
-                        <segue destination="TFE-3s-fe5" kind="show" identifier="pinterestSegue" id="hr7-Nk-MJA"/>
+                        <segue destination="TFE-3s-fe5" kind="show" identifier="PinterestSegue" id="hr7-Nk-MJA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6H-WW-nP7" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,7 +15,15 @@ class PinterestViewController : UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let patternImage = UIImage(named: "Pattern") {
+            view.backgroundColor = UIColor(patternImage: patternImage)
+        }
+        
+        collectionView?.backgroundColor = UIColor.clearColor()
+        collectionView?.contentInset = UIEdgeInsets(top: 23, left: 5, bottom: 5, right: 5)
+    
         collectionView?.dataSource = dataSource
-        (collectionView?.collectionViewLayout as! PinterestViewLayout).delegate = self
+        (collectionView?.collectionViewLayout as! PinterestViewLayout).delegate = dataSource
     }
 }
+
