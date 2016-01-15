@@ -28,10 +28,12 @@ class BounceMenuViewController : UIViewController{
         leftScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: "handleScreenEdgePan:")
         leftScreenEdgeGestureRecognizer.edges = .Left
         leftScreenEdgeGestureRecognizer.delegate = self
+        view.addGestureRecognizer(leftScreenEdgeGestureRecognizer)
         
         rightScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: "handleScreenEdgePan:")
         rightScreenEdgeGestureRecognizer.edges = .Right
         rightScreenEdgeGestureRecognizer.delegate = self
+        view.addGestureRecognizer(rightScreenEdgeGestureRecognizer)
         
         contentView.layer.shadowColor = UIColor.orangeColor().CGColor
         contentView.layer.shadowOpacity = 1.0
