@@ -44,6 +44,7 @@
                         <segue destination="qCn-Cb-hAs" kind="show" identifier="NewtownianSegue" id="cXU-SY-tbB"/>
                         <segue destination="CI8-da-jMj" kind="show" identifier="CalendarSegue" id="gDe-Jd-OcF"/>
                         <segue destination="TFE-3s-fe5" kind="show" identifier="PinterestSegue" id="hr7-Nk-MJA"/>
+                        <segue destination="Wvg-4V-qQ1" kind="show" identifier="SnapDynamicSegue" id="b73-h7-vLA"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6H-WW-nP7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,7 +83,7 @@
                 <viewControllerPlaceholder storyboardName="Calendar" id="CI8-da-jMj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEV-XK-q6b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="149"/>
+            <point key="canvasLocation" x="2720.5" y="154"/>
         </scene>
         <!--SpringyCollection-->
         <scene sceneID="VcT-pq-Blm">
@@ -90,7 +91,7 @@
                 <viewControllerPlaceholder storyboardName="SpringyCollection" id="33Y-SI-D79" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wo-Ng-ZI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742.5" y="305"/>
+            <point key="canvasLocation" x="2747.5" y="278"/>
         </scene>
         <!--Newtownian-->
         <scene sceneID="hTI-lm-DLq">
@@ -98,7 +99,7 @@
                 <viewControllerPlaceholder storyboardName="Newtownian" id="qCn-Cb-hAs" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QyN-i2-xkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742.5" y="422"/>
+            <point key="canvasLocation" x="2730.5" y="373"/>
         </scene>
         <!--SimpleDynamic-->
         <scene sceneID="qXY-TN-bf0">
@@ -106,7 +107,15 @@
                 <viewControllerPlaceholder storyboardName="SimpleDynamic" id="nx2-T5-Sfe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Pj-ou-dXd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2742" y="1628"/>
+            <point key="canvasLocation" x="2740" y="479"/>
+        </scene>
+        <!--SnapDynamic-->
+        <scene sceneID="pFe-OE-dj5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SnapDynamic" id="Wvg-4V-qQ1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hLe-re-bqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734.5" y="623"/>
         </scene>
     </scenes>
 </document>

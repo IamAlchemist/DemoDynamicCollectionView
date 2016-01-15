@@ -36,6 +36,7 @@
 		72C35A6C1C48962F0024C240 /* SpringyCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A6B1C48962F0024C240 /* SpringyCollection.storyboard */; };
 		72C35A6F1C4896600024C240 /* Newtownian.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A6D1C4896600024C240 /* Newtownian.storyboard */; };
 		72C35A711C4896840024C240 /* SimpleDynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A701C4896840024C240 /* SimpleDynamic.storyboard */; };
+		72C35A751C4897370024C240 /* SnapDynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A731C4897370024C240 /* SnapDynamic.storyboard */; };
 		72E2D6931C438F36001D4F26 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6921C438F36001D4F26 /* CalendarViewController.swift */; };
 		72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */; };
 		72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */; };
@@ -78,6 +79,7 @@
 		72C35A6B1C48962F0024C240 /* SpringyCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpringyCollection.storyboard; sourceTree = "<group>"; };
 		72C35A6E1C4896600024C240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Newtownian.storyboard; sourceTree = "<group>"; };
 		72C35A701C4896840024C240 /* SimpleDynamic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleDynamic.storyboard; sourceTree = "<group>"; };
+		72C35A741C4897370024C240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SnapDynamic.storyboard; sourceTree = "<group>"; };
 		72E2D6921C438F36001D4F26 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
 		72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventCell.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 		7264A54F1C3B711700DC577B /* DemoDynamicCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				72C35A721C48971C0024C240 /* SnapDynamic */,
 				64FB304A1C46928100DBE79F /* SpringyCollectionView */,
 				64FB304C1C4692BE00DBE79F /* SimpleDynamic */,
 				64FB304B1C4692B400DBE79F /* Menu */,
@@ -214,6 +217,14 @@
 				64FB30551C4698F100DBE79F /* Pinterest */,
 			);
 			path = DemoDynamicCollectionView;
+			sourceTree = "<group>";
+		};
+		72C35A721C48971C0024C240 /* SnapDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				72C35A731C4897370024C240 /* SnapDynamic.storyboard */,
+			);
+			name = SnapDynamic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				7264A5581C3B711700DC577B /* Assets.xcassets in Resources */,
 				72C35A6A1C4895FD0024C240 /* Calendar.storyboard in Resources */,
 				64FB30611C477C2F00DBE79F /* Photos.xcassets in Resources */,
+				72C35A751C4897370024C240 /* SnapDynamic.storyboard in Resources */,
 				7264A5561C3B711700DC577B /* Main.storyboard in Resources */,
 				72C35A6C1C48962F0024C240 /* SpringyCollection.storyboard in Resources */,
 				64FB305F1C4762F000DBE79F /* Photos.plist in Resources */,
@@ -365,6 +377,14 @@
 				72C35A6E1C4896600024C240 /* Base */,
 			);
 			name = Newtownian.storyboard;
+			sourceTree = "<group>";
+		};
+		72C35A731C4897370024C240 /* SnapDynamic.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72C35A741C4897370024C240 /* Base */,
+			);
+			name = SnapDynamic.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
