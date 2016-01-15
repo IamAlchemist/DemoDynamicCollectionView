@@ -30,6 +30,17 @@ class SnapDynamicViewController : UIViewController {
         let frame = CGRect(x: self.view.center.x - 50, y: -100, width: 150, height: 100)
         let view = UIView(frame: frame)
         view.backgroundColor = UIColor.orangeColor()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "alertViewTapped:")
+        view.addGestureRecognizer(tapGesture)
         return view
+    }
+    
+    func alertViewTapped(gesture : UITapGestureRecognizer) {
+        dynamicAnimator.removeAllBehaviors()
+        
+        guard let gestureView = gesture.view else { return }
+        let gravity = UIGravityBehavior(items: [gestureView])
+        dynamicAnimator.addBehavior(gravity)
     }
 }
