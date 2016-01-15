@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Snap Dynamic View Controller-->
         <scene sceneID="1Q6-OR-LlC">
             <objects>
-                <viewController id="TpO-sy-djl" sceneMemberID="viewController">
+                <viewController id="TpO-sy-djl" customClass="SnapDynamicViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hGq-Tx-fDh"/>
                         <viewControllerLayoutGuide type="bottom" id="nCD-XV-hh2"/>
@@ -16,13 +16,26 @@
                     <view key="view" contentMode="scaleToFill" id="34V-0L-rMf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjV-o9-tFs">
+                                <rect key="frame" x="281" y="550" width="38" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="showAlert:" destination="TpO-sy-djl" eventType="touchUpInside" id="cXZ-tE-tar"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VjV-o9-tFs" firstAttribute="centerX" secondItem="34V-0L-rMf" secondAttribute="centerX" id="W6h-jW-3UM"/>
+                            <constraint firstItem="nCD-XV-hh2" firstAttribute="top" secondItem="VjV-o9-tFs" secondAttribute="bottom" constant="20" id="eU1-ja-fJJ"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NX3-M3-Qyq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2861" y="953"/>
+            <point key="canvasLocation" x="2129" y="660"/>
         </scene>
     </scenes>
 </document>
