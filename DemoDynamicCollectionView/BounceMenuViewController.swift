@@ -62,13 +62,12 @@ class BounceMenuViewController : UIViewController{
 
         let itemBehavior = UIDynamicItemBehavior(items: [contentView])
         itemBehavior.elasticity = 0.7
-        itemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(itemBehavior)
     }
     
     func handleScreenEdgePan(gestureRecognizer : UIScreenEdgePanGestureRecognizer){
         var location = gestureRecognizer.locationInView(view)
-        location.y = CGRectGetMidY(view.bounds)
+        location.y = CGRectGetMidY(contentView.bounds)
         
         switch gestureRecognizer.state {
         case .Began:
@@ -77,6 +76,7 @@ class BounceMenuViewController : UIViewController{
             dynamicAnimator.addBehavior(attachmentBehavior)
         case .Changed:
             attachmentBehavior.anchorPoint = location
+            print("\(location)")
         case .Ended:
             dynamicAnimator.removeBehavior(attachmentBehavior)
             attachmentBehavior = nil
