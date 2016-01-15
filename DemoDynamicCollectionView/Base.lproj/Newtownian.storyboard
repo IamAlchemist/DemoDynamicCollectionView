@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jYv-hF-uAb">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Newtownian-->
+        <scene sceneID="mEV-2y-TgM">
+            <objects>
+                <collectionViewController id="jYv-hF-uAb" customClass="NewtownianCollectionViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zwU-2T-T21">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewLayout key="collectionViewLayout" id="GPE-lF-tdk" customClass="NewtownianCollectionViewLayout" customModule="DemoDynamicCollectionView" customModuleProvider="target"/>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewtownianCell" id="1tp-R3-NoV" customClass="NewtownianCell" customModule="DemoDynamicCollectionView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="158" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="142"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8mN-ef-4N9">
+                                            <rect key="frame" x="0.0" y="0.0" width="158" height="142"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="8mN-ef-4N9" secondAttribute="trailing" constant="-8" id="GSu-mL-lav"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="8mN-ef-4N9" secondAttribute="bottom" constant="-8" id="KYP-50-3N2"/>
+                                    <constraint firstItem="8mN-ef-4N9" firstAttribute="top" secondItem="1tp-R3-NoV" secondAttribute="topMargin" constant="-8" id="h8e-WF-Xys"/>
+                                    <constraint firstItem="8mN-ef-4N9" firstAttribute="leading" secondItem="1tp-R3-NoV" secondAttribute="leadingMargin" constant="-8" id="sgU-Fp-0el"/>
+                                </constraints>
+                                <size key="customSize" width="158" height="142"/>
+                                <connections>
+                                    <outlet property="imageView" destination="8mN-ef-4N9" id="g8H-cR-Ym9"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="jYv-hF-uAb" id="iXS-Ry-Qqb"/>
+                            <outlet property="delegate" destination="jYv-hF-uAb" id="waR-eA-gFF"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Newtownian" id="Lvu-Wv-vcp">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="Ovy-ne-Y7N">
+                            <connections>
+                                <action selector="deleteButtonTapped:" destination="jYv-hF-uAb" id="1Um-bV-QfL"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0K4-S5-lGZ">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="jYv-hF-uAb" id="ibA-1G-7DB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eu6-Uv-k9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2729" y="818"/>
+        </scene>
+    </scenes>
+</document>

@@ -32,6 +32,10 @@
 		72B7A02C1C3D363800723465 /* NewtownianCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A02B1C3D363800723465 /* NewtownianCollectionViewDataSource.swift */; };
 		72B7A02E1C3D36FA00723465 /* NewtownianCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B7A02D1C3D36FA00723465 /* NewtownianCell.swift */; };
 		72C35A671C44EB540024C240 /* NewtownianLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C35A661C44EB540024C240 /* NewtownianLayoutAttributes.swift */; };
+		72C35A6A1C4895FD0024C240 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A681C4895FD0024C240 /* Calendar.storyboard */; };
+		72C35A6C1C48962F0024C240 /* SpringyCollection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A6B1C48962F0024C240 /* SpringyCollection.storyboard */; };
+		72C35A6F1C4896600024C240 /* Newtownian.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A6D1C4896600024C240 /* Newtownian.storyboard */; };
+		72C35A711C4896840024C240 /* SimpleDynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A701C4896840024C240 /* SimpleDynamic.storyboard */; };
 		72E2D6931C438F36001D4F26 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6921C438F36001D4F26 /* CalendarViewController.swift */; };
 		72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */; };
 		72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */; };
@@ -70,6 +74,10 @@
 		72B7A02B1C3D363800723465 /* NewtownianCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		72B7A02D1C3D36FA00723465 /* NewtownianCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianCell.swift; sourceTree = "<group>"; };
 		72C35A661C44EB540024C240 /* NewtownianLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianLayoutAttributes.swift; sourceTree = "<group>"; };
+		72C35A691C4895FD0024C240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Calendar.storyboard; sourceTree = "<group>"; };
+		72C35A6B1C48962F0024C240 /* SpringyCollection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SpringyCollection.storyboard; sourceTree = "<group>"; };
+		72C35A6E1C4896600024C240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Newtownian.storyboard; sourceTree = "<group>"; };
+		72C35A701C4896840024C240 /* SimpleDynamic.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SimpleDynamic.storyboard; sourceTree = "<group>"; };
 		72E2D6921C438F36001D4F26 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
 		72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventCell.swift; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 		64FB304A1C46928100DBE79F /* SpringyCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				72C35A6B1C48962F0024C240 /* SpringyCollection.storyboard */,
 				72B79FFF1C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift */,
 				72B7A0031C3BC22600723465 /* SpringyCollectionViewController.swift */,
 				72B7A0051C3BC6D700723465 /* SpringyCollectionViewLayout.swift */,
@@ -114,6 +123,7 @@
 		64FB304C1C4692BE00DBE79F /* SimpleDynamic */ = {
 			isa = PBXGroup;
 			children = (
+				72C35A701C4896840024C240 /* SimpleDynamic.storyboard */,
 				72B7A0251C3CEE5D00723465 /* SimpleDynamicViewController.swift */,
 			);
 			name = SimpleDynamic;
@@ -122,6 +132,7 @@
 		64FB304D1C4692D400DBE79F /* NewtownianCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				72C35A6D1C4896600024C240 /* Newtownian.storyboard */,
 				72C35A661C44EB540024C240 /* NewtownianLayoutAttributes.swift */,
 				64FB30481C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift */,
 				72B7A0271C3D270400723465 /* NewtownianCollectionViewLayout.swift */,
@@ -135,6 +146,8 @@
 		64FB304E1C4692E900DBE79F /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				72C35A681C4895FD0024C240 /* Calendar.storyboard */,
+				72E2D6A01C43A019001D4F26 /* CalendarHeaderView.xib */,
 				72E2D6921C438F36001D4F26 /* CalendarViewController.swift */,
 				72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */,
 				72E2D6A21C43A83E001D4F26 /* WeekCalendarLayout.swift */,
@@ -152,7 +165,6 @@
 				64FB30601C477C2F00DBE79F /* Photos.xcassets */,
 				7264A5501C3B711700DC577B /* AppDelegate.swift */,
 				7264A5541C3B711700DC577B /* Main.storyboard */,
-				72E2D6A01C43A019001D4F26 /* CalendarHeaderView.xib */,
 				7264A5571C3B711700DC577B /* Assets.xcassets */,
 				7264A5591C3B711700DC577B /* LaunchScreen.storyboard */,
 				7264A55C1C3B711700DC577B /* Info.plist */,
@@ -262,12 +274,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C35A6F1C4896600024C240 /* Newtownian.storyboard in Resources */,
 				7264A55B1C3B711700DC577B /* LaunchScreen.storyboard in Resources */,
 				64FB30521C46941C00DBE79F /* Pinterest.storyboard in Resources */,
+				72C35A711C4896840024C240 /* SimpleDynamic.storyboard in Resources */,
 				72E2D6A11C43A019001D4F26 /* CalendarHeaderView.xib in Resources */,
 				7264A5581C3B711700DC577B /* Assets.xcassets in Resources */,
+				72C35A6A1C4895FD0024C240 /* Calendar.storyboard in Resources */,
 				64FB30611C477C2F00DBE79F /* Photos.xcassets in Resources */,
 				7264A5561C3B711700DC577B /* Main.storyboard in Resources */,
+				72C35A6C1C48962F0024C240 /* SpringyCollection.storyboard in Resources */,
 				64FB305F1C4762F000DBE79F /* Photos.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +349,22 @@
 				7264A55A1C3B711700DC577B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		72C35A681C4895FD0024C240 /* Calendar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72C35A691C4895FD0024C240 /* Base */,
+			);
+			name = Calendar.storyboard;
+			sourceTree = "<group>";
+		};
+		72C35A6D1C4896600024C240 /* Newtownian.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72C35A6E1C4896600024C240 /* Base */,
+			);
+			name = Newtownian.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
