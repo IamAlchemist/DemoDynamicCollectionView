@@ -67,7 +67,7 @@
                     <navigationItem key="navigationItem" id="J13-0h-Nkk">
                         <barButtonItem key="leftBarButtonItem" systemItem="trash" id="lLY-pJ-KhX">
                             <connections>
-                                <action selector="bounceButtonTapped:" destination="faF-IG-Ceq" id="OEO-sc-5CH"/>
+                                <action selector="bounceButtonTapped:" destination="faF-IG-Ceq" id="8wK-Td-G5q"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
