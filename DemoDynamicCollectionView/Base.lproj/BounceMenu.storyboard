@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Bounce Menu View Controller-->
+        <!--Title-->
         <scene sceneID="Ff5-TR-uNO">
             <objects>
                 <viewController id="ccI-26-HEb" customClass="BounceMenuViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,6 +42,9 @@
                             <constraint firstItem="IJn-Nn-63Z" firstAttribute="leading" secondItem="x8t-VY-ZuV" secondAttribute="leading" id="xzF-TR-cZm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="zhB-cT-GkM">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="EEy-nj-um3"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="contentView" destination="eB6-bY-liT" id="Wm7-c0-7jY"/>
