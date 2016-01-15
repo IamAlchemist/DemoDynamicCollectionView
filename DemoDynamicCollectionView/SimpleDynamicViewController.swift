@@ -28,6 +28,10 @@ class SimpleDynamicViewController: UIViewController {
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
         dynamicAnimator.addBehavior(collisionBehavior)
         
+        let elasticityBehavior = UIDynamicItemBehavior(items: [squre])
+        elasticityBehavior.elasticity = 1.0
+        dynamicAnimator.addBehavior(elasticityBehavior)
+        
         self.dynamicAnimator = dynamicAnimator
     }
 

@@ -51,17 +51,25 @@
             </objects>
             <point key="canvasLocation" x="1430" y="760"/>
         </scene>
-        <!--View Controller-->
+        <!--Bounce Content View Controller-->
         <scene sceneID="drD-YB-0nJ">
             <objects>
-                <viewController id="faF-IG-Ceq" sceneMemberID="viewController">
+                <viewController id="faF-IG-Ceq" customClass="BounceContentViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s7j-wf-POH"/>
+                        <viewControllerLayoutGuide type="bottom" id="3O2-9e-fL7"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2Bv-F6-RhO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="J13-0h-Nkk">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="lLY-pJ-KhX"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="lLY-pJ-KhX">
+                            <connections>
+                                <action selector="bounceButtonTapped:" destination="faF-IG-Ceq" id="OEO-sc-5CH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEG-sj-OZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -72,6 +80,10 @@
         <scene sceneID="QNh-b4-rEg">
             <objects>
                 <viewController id="jA9-4v-uSc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Vt-s9-8jq"/>
+                        <viewControllerLayoutGuide type="bottom" id="nW6-7T-SjI"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UPd-gT-Od5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
