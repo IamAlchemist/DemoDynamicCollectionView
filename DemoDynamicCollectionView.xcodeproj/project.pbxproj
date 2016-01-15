@@ -39,6 +39,7 @@
 		72C35A751C4897370024C240 /* SnapDynamic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A731C4897370024C240 /* SnapDynamic.storyboard */; };
 		72C35A771C4897890024C240 /* SnapDynamicviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C35A761C4897890024C240 /* SnapDynamicviewController.swift */; };
 		72C35A7B1C48C33C0024C240 /* BounceMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C35A791C48C33C0024C240 /* BounceMenu.storyboard */; };
+		72C35A7D1C48C3B80024C240 /* BounceMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C35A7C1C48C3B80024C240 /* BounceMenuViewController.swift */; };
 		72E2D6931C438F36001D4F26 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6921C438F36001D4F26 /* CalendarViewController.swift */; };
 		72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */; };
 		72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */; };
@@ -84,6 +85,7 @@
 		72C35A741C4897370024C240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SnapDynamic.storyboard; sourceTree = "<group>"; };
 		72C35A761C4897890024C240 /* SnapDynamicviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapDynamicviewController.swift; sourceTree = "<group>"; };
 		72C35A7A1C48C33C0024C240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BounceMenu.storyboard; sourceTree = "<group>"; };
+		72C35A7C1C48C3B80024C240 /* BounceMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceMenuViewController.swift; sourceTree = "<group>"; };
 		72E2D6921C438F36001D4F26 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		72E2D6941C438F90001D4F26 /* CalendarDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarDataSource.swift; sourceTree = "<group>"; };
 		72E2D6961C4390F5001D4F26 /* CalendarEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventCell.swift; sourceTree = "<group>"; };
@@ -171,7 +173,6 @@
 				64FB30601C477C2F00DBE79F /* Photos.xcassets */,
 				7264A5501C3B711700DC577B /* AppDelegate.swift */,
 				7264A5541C3B711700DC577B /* Main.storyboard */,
-				72C35A791C48C33C0024C240 /* BounceMenu.storyboard */,
 				7264A5571C3B711700DC577B /* Assets.xcassets */,
 				7264A5591C3B711700DC577B /* LaunchScreen.storyboard */,
 				7264A55C1C3B711700DC577B /* Info.plist */,
@@ -237,6 +238,8 @@
 		72C35A781C48C2A90024C240 /* BounceMenu */ = {
 			isa = PBXGroup;
 			children = (
+				72C35A791C48C33C0024C240 /* BounceMenu.storyboard */,
+				72C35A7C1C48C3B80024C240 /* BounceMenuViewController.swift */,
 			);
 			name = BounceMenu;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				72B7A0021C3BBF8200723465 /* BasicCell.swift in Sources */,
 				72C35A771C4897890024C240 /* SnapDynamicviewController.swift in Sources */,
 				64FB30591C46998D00DBE79F /* PinterestViewLayout.swift in Sources */,
+				72C35A7D1C48C3B80024C240 /* BounceMenuViewController.swift in Sources */,
 				72B7A02E1C3D36FA00723465 /* NewtownianCell.swift in Sources */,
 				7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */,
 				64FB305D1C47615200DBE79F /* Photo.swift in Sources */,
