@@ -14,6 +14,8 @@ class BounceMenuViewController : UIViewController{
     
     var dynamicAnimator : UIDynamicAnimator!
     var pushBehavior : UIPushBehavior!
+    var gravityBehavior : UIGravityBehavior!
+    var attachmentBehavior : UIAttachmentBehavior!
     
     var leftScreenEdgeGestureRecognizer : UIScreenEdgePanGestureRecognizer!
     var rightScreenEdgeGestureRecognizer : UIScreenEdgePanGestureRecognizer!
@@ -47,9 +49,9 @@ class BounceMenuViewController : UIViewController{
         collision.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -280))
         dynamicAnimator.addBehavior(collision)
 
-        let gravity = UIGravityBehavior(items: [contentView])
-        gravity.gravityDirection = CGVector(dx: -1, dy: 0)
-        dynamicAnimator.addBehavior(gravity)
+        gravityBehavior = UIGravityBehavior(items: [contentView])
+        gravityBehavior.gravityDirection = CGVector(dx: -1, dy: 0)
+        dynamicAnimator.addBehavior(gravityBehavior)
 
         pushBehavior = UIPushBehavior(items: [contentView], mode: .Instantaneous)
         pushBehavior.magnitude = 0.0
@@ -63,6 +65,39 @@ class BounceMenuViewController : UIViewController{
     }
     
     func handleScreenEdgePan(gestureRecognizer : UIScreenEdgePanGestureRecognizer){
+        var location = gestureRecognizer.locationInView(view)
+        location.y = CGRectGetMidY(view.bounds)
+        
+        switch gestureRecognizer.state {
+        case .Began:
+            dynamicAnimator.removeBehavior(gravityBehavior)
+            attachmentBehavior = UIAttachmentBehavior(item: contentView, attachedToAnchor: location)
+            dynamicAnimator.addBehavior(attachmentBehavior)
+        case .Changed:
+            attachmentBehavior.anchorPoint = location
+        case .Ended:
+            dynamicAnimator.removeBehavior(attachmentBehavior)
+            attachmentBehavior = nil
+            
+            let velocity = gestureRecognizer.velocityInView(view)
+            
+            if velocity.x > 0 {
+                isMenuOpen = true
+                gravityBehavior.gravityDirection = CGVector(dx: 1,dy: 0)
+            }
+            else {
+                isMenuOpen = false
+                gravityBehavior.gravityDirection = CGVector(dx: -1, dy: 0)
+            }
+            
+            dynamicAnimator.addBehavior(gravityBehavior)
+            
+            pushBehavior.pushDirection = CGVector(dx: velocity.y / 10, dy: 0)
+            pushBehavior.active = true
+            
+        default:
+            break
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
