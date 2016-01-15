@@ -13,10 +13,23 @@ class BounceMenuViewController : UIViewController{
     @IBOutlet weak var contentView: UIView!
     
     var dynamicAnimator : UIDynamicAnimator!
-    var pushBehavior : UIPushBehavior?
+    var pushBehavior : UIPushBehavior!
+    
+    var leftScreenEdgeGestureRecognizer : UIScreenEdgePanGestureRecognizer!
+    var rightScreenEdgeGestureRecognizer : UIScreenEdgePanGestureRecognizer!
+    
+    var isMenuOpen = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        leftScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: "handleScreenEdgePan:")
+        leftScreenEdgeGestureRecognizer.edges = .Left
+        leftScreenEdgeGestureRecognizer.delegate = self
+        
+        rightScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: "handleScreenEdgePan:")
+        rightScreenEdgeGestureRecognizer.edges = .Right
+        rightScreenEdgeGestureRecognizer.delegate = self
         
         contentView.layer.shadowColor = UIColor.orangeColor().CGColor
         contentView.layer.shadowOpacity = 1.0
@@ -38,16 +51,18 @@ class BounceMenuViewController : UIViewController{
         gravity.gravityDirection = CGVector(dx: -1, dy: 0)
         dynamicAnimator.addBehavior(gravity)
 
-        let push = UIPushBehavior(items: [contentView], mode: .Instantaneous)
-        push.magnitude = 0.0
-        push.angle = 0.0
-        dynamicAnimator.addBehavior(push)
-        pushBehavior = push
+        pushBehavior = UIPushBehavior(items: [contentView], mode: .Instantaneous)
+        pushBehavior.magnitude = 0.0
+        pushBehavior.angle = 0.0
+        dynamicAnimator.addBehavior(pushBehavior)
 
         let itemBehavior = UIDynamicItemBehavior(items: [contentView])
         itemBehavior.elasticity = 0.7
         itemBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(itemBehavior)
+    }
+    
+    func handleScreenEdgePan(gestureRecognizer : UIScreenEdgePanGestureRecognizer){
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -56,6 +71,19 @@ class BounceMenuViewController : UIViewController{
         if segue.identifier == "contentViewController" {
             ((segue.destinationViewController as? UINavigationController)?.topViewController as? BounceContentViewController)?.delegate = self
         }
+    }
+}
+
+extension BounceMenuViewController : UIGestureRecognizerDelegate {
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
+        if gestureRecognizer == leftScreenEdgeGestureRecognizer && isMenuOpen == false {
+            return true
+        }
+        else if gestureRecognizer == rightScreenEdgeGestureRecognizer && isMenuOpen == true {
+            return true
+        }
+        
+        return false
     }
 }
 
