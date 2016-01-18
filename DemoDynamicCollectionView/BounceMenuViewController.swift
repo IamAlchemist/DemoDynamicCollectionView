@@ -83,7 +83,7 @@ class BounceMenuViewController : UIViewController{
         case .Changed:
             anchor.x = location.x - anchorDeltaX
             attachmentBehavior.anchorPoint = anchor
-            print("\(location)")
+            print("anchor : \(anchor), frame: \(contentView.center)")
         case .Ended:
             dynamicAnimator.removeBehavior(attachmentBehavior)
             attachmentBehavior = nil

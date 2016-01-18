@@ -42,7 +42,9 @@
                             <constraint firstItem="IJn-Nn-63Z" firstAttribute="leading" secondItem="x8t-VY-ZuV" secondAttribute="leading" id="xzF-TR-cZm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="zhB-cT-GkM"/>
+                    <navigationItem key="navigationItem" title="Title" id="zhB-cT-GkM">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="SS0-ZJ-f65"/>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="contentView" destination="eB6-bY-liT" id="Wm7-c0-7jY"/>
