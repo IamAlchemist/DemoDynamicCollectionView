@@ -41,7 +41,7 @@ class SimpleDynamicViewController: UIViewController {
         case .Began:
             let squreCenterPoint = CGPointMake(squre.center.x, squre.center.y)
             let attachmentBehavior = UIAttachmentBehavior(item: squre, offsetFromCenter:UIOffset(horizontal: -25, vertical: -25), attachedToAnchor: squreCenterPoint)
-            attachmentBehavior.length = 50
+            attachmentBehavior.length = 0
             attachmentBehavior.damping = 0.8
             attachmentBehavior.frequency = 1
             self.attachmentBehavior = attachmentBehavior
