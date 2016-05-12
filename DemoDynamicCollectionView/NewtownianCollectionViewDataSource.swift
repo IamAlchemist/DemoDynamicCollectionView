@@ -12,7 +12,7 @@ class NewtownianCollectionViewDataSource : NSObject, UICollectionViewDataSource 
     struct Generator {
         static var number : Int = 0
         static func getNumber() -> Int {
-            number++
+            number += 1
             return number
         }
     }

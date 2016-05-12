@@ -27,12 +27,12 @@ class BounceMenuViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        leftScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: "handleScreenEdgePan:")
+        leftScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleScreenEdgePan(_:)))
         leftScreenEdgeGestureRecognizer.edges = .Left
         leftScreenEdgeGestureRecognizer.delegate = self
         view.addGestureRecognizer(leftScreenEdgeGestureRecognizer)
         
-        rightScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: "handleScreenEdgePan:")
+        rightScreenEdgeGestureRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleScreenEdgePan(_:)))
         rightScreenEdgeGestureRecognizer.edges = .Right
         rightScreenEdgeGestureRecognizer.delegate = self
         view.addGestureRecognizer(rightScreenEdgeGestureRecognizer)
