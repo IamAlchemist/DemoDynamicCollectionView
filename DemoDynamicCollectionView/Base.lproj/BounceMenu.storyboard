@@ -43,7 +43,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="zhB-cT-GkM">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="SS0-ZJ-f65"/>
+                        <barButtonItem key="leftBarButtonItem" title="Pop" id="SS0-ZJ-f65">
+                            <connections>
+                                <action selector="pop:" destination="ccI-26-HEb" id="iHx-lY-4yT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>

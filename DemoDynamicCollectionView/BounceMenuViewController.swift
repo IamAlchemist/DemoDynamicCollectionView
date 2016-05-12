@@ -116,6 +116,10 @@ class BounceMenuViewController : UIViewController{
             ((segue.destinationViewController as? UINavigationController)?.topViewController as? BounceContentViewController)?.delegate = self
         }
     }
+    
+    @IBAction func pop(sender: UIBarButtonItem) {
+        navigationController?.popViewControllerAnimated(true)
+    }
 }
 
 extension BounceMenuViewController : UIGestureRecognizerDelegate {
