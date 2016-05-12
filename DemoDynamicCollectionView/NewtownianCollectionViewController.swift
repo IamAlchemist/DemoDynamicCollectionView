@@ -25,6 +25,11 @@ class NewtownianCollectionViewController : UICollectionViewController {
     }
     
     @IBAction func deleteButtonTapped(sender: UIBarButtonItem) {
+        if let collectionViewDatasource = collectionViewDatasource
+            where collectionViewDatasource.data.count == 0 {
+            navigationController?.popViewControllerAnimated(true)
+        }
+        
         collectionViewDatasource?.decreaseItem()
         collectionView?.reloadData()
     }
