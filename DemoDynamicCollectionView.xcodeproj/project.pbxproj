@@ -50,6 +50,7 @@
 		72E2D6A11C43A019001D4F26 /* CalendarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6A01C43A019001D4F26 /* CalendarHeaderView.xib */; };
 		72E2D6A31C43A83E001D4F26 /* WeekCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6A21C43A83E001D4F26 /* WeekCalendarLayout.swift */; };
 		72F5B3E11CF4556400FD612C /* CollectionTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F5B3DF1CF4556400FD612C /* CollectionTransition.storyboard */; };
+		72F5B3E41CF45C1700FD612C /* DCCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5B3E31CF45C1700FD612C /* DCCollectionDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		72E2D6A01C43A019001D4F26 /* CalendarHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarHeaderView.xib; sourceTree = "<group>"; };
 		72E2D6A21C43A83E001D4F26 /* WeekCalendarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekCalendarLayout.swift; sourceTree = "<group>"; };
 		72F5B3E01CF4556400FD612C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CollectionTransition.storyboard; sourceTree = "<group>"; };
+		72F5B3E31CF45C1700FD612C /* DCCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCCollectionDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				72F5B3DF1CF4556400FD612C /* CollectionTransition.storyboard */,
+				72F5B3E31CF45C1700FD612C /* DCCollectionDataSource.swift */,
 			);
 			name = CollectionTransition;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				72B7A0061C3BC6D700723465 /* SpringyCollectionViewLayout.swift in Sources */,
 				72B7A0001C3BBE5500723465 /* SpringyCollectionVeiwDataSource.swift in Sources */,
 				72E2D6931C438F36001D4F26 /* CalendarViewController.swift in Sources */,
+				72F5B3E41CF45C1700FD612C /* DCCollectionDataSource.swift in Sources */,
 				72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */,
 				72E2D6991C439145001D4F26 /* CalendarEvent.swift in Sources */,
 				72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */,
