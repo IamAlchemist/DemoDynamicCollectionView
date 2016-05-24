@@ -49,6 +49,7 @@
 		72E2D69D1C43952D001D4F26 /* SampleCalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D69C1C43952D001D4F26 /* SampleCalendarEvent.swift */; };
 		72E2D6A11C43A019001D4F26 /* CalendarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72E2D6A01C43A019001D4F26 /* CalendarHeaderView.xib */; };
 		72E2D6A31C43A83E001D4F26 /* WeekCalendarLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E2D6A21C43A83E001D4F26 /* WeekCalendarLayout.swift */; };
+		72F5B3E11CF4556400FD612C /* CollectionTransition.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F5B3DF1CF4556400FD612C /* CollectionTransition.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		72E2D69C1C43952D001D4F26 /* SampleCalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCalendarEvent.swift; sourceTree = "<group>"; };
 		72E2D6A01C43A019001D4F26 /* CalendarHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarHeaderView.xib; sourceTree = "<group>"; };
 		72E2D6A21C43A83E001D4F26 /* WeekCalendarLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekCalendarLayout.swift; sourceTree = "<group>"; };
+		72F5B3E01CF4556400FD612C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CollectionTransition.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,17 +171,16 @@
 			name = Calendar;
 			sourceTree = "<group>";
 		};
-		64FB304F1C46930400DBE79F /* other */ = {
+		64FB304F1C46930400DBE79F /* Supports */ = {
 			isa = PBXGroup;
 			children = (
 				64FB30601C477C2F00DBE79F /* Photos.xcassets */,
 				7264A5501C3B711700DC577B /* AppDelegate.swift */,
-				7264A5541C3B711700DC577B /* Main.storyboard */,
 				7264A5571C3B711700DC577B /* Assets.xcassets */,
 				7264A5591C3B711700DC577B /* LaunchScreen.storyboard */,
 				7264A55C1C3B711700DC577B /* Info.plist */,
 			);
-			name = other;
+			name = Supports;
 			sourceTree = "<group>";
 		};
 		64FB30551C4698F100DBE79F /* Pinterest */ = {
@@ -200,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				7264A54F1C3B711700DC577B /* DemoDynamicCollectionView */,
+				7264A5541C3B711700DC577B /* Main.storyboard */,
 				7264A54E1C3B711700DC577B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -222,7 +224,8 @@
 				64FB304B1C4692B400DBE79F /* Menu */,
 				64FB304D1C4692D400DBE79F /* NewtownianCollectionView */,
 				64FB304E1C4692E900DBE79F /* Calendar */,
-				64FB304F1C46930400DBE79F /* other */,
+				64FB304F1C46930400DBE79F /* Supports */,
+				72F5B3E21CF455C600FD612C /* CollectionTransition */,
 				64FB30551C4698F100DBE79F /* Pinterest */,
 			);
 			path = DemoDynamicCollectionView;
@@ -245,6 +248,14 @@
 				6482E0311C48CC0B00E3869E /* BounceContentViewController.swift */,
 			);
 			name = BounceMenu;
+			sourceTree = "<group>";
+		};
+		72F5B3E21CF455C600FD612C /* CollectionTransition */ = {
+			isa = PBXGroup;
+			children = (
+				72F5B3DF1CF4556400FD612C /* CollectionTransition.storyboard */,
+			);
+			name = CollectionTransition;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +321,7 @@
 				64FB30521C46941C00DBE79F /* Pinterest.storyboard in Resources */,
 				72C35A711C4896840024C240 /* SimpleDynamic.storyboard in Resources */,
 				72E2D6A11C43A019001D4F26 /* CalendarHeaderView.xib in Resources */,
+				72F5B3E11CF4556400FD612C /* CollectionTransition.storyboard in Resources */,
 				7264A5581C3B711700DC577B /* Assets.xcassets in Resources */,
 				72C35A6A1C4895FD0024C240 /* Calendar.storyboard in Resources */,
 				72C35A7B1C48C33C0024C240 /* BounceMenu.storyboard in Resources */,
@@ -377,6 +389,7 @@
 				7264A5551C3B711700DC577B /* Base */,
 			);
 			name = Main.storyboard;
+			path = DemoDynamicCollectionView;
 			sourceTree = "<group>";
 		};
 		7264A5591C3B711700DC577B /* LaunchScreen.storyboard */ = {
@@ -417,6 +430,14 @@
 				72C35A7A1C48C33C0024C240 /* Base */,
 			);
 			name = BounceMenu.storyboard;
+			sourceTree = "<group>";
+		};
+		72F5B3DF1CF4556400FD612C /* CollectionTransition.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72F5B3E01CF4556400FD612C /* Base */,
+			);
+			name = CollectionTransition.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
