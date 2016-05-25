@@ -45,8 +45,24 @@ extension DCRootViewController {
     }
 }
 
+extension DCRootViewController {
+    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        guard let dvc = self.storyboard?.instantiateViewControllerWithIdentifier("DCDetailViewController") as? DCDetailViewController
+            else { return }
+        
+        dvc.dataSource = collectionView.dataSource
+        
+        self.navigationController?.pushViewController(dvc, animated: true)
+    }
+}
+
 extension DCRootViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: 200)
+        if collectionView == self.collectionView {
+            return CGSize(width: collectionView.bounds.width, height: 200)
+        }
+        else {
+            return CGSize(width: 180, height: 180)
+        }
     }
 }
