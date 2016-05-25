@@ -44,3 +44,9 @@ extension DCRootViewController {
         return containerCell
     }
 }
+
+extension DCRootViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSize(width: collectionView.bounds.width, height: 200)
+    }
+}
