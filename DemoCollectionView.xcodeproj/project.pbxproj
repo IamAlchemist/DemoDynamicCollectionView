@@ -21,6 +21,9 @@
 		64FB30611C477C2F00DBE79F /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FB30601C477C2F00DBE79F /* Photos.xcassets */; };
 		72013E241CF5898700D17AD5 /* DCLineToGridAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E231CF5898700D17AD5 /* DCLineToGridAnimator.swift */; };
 		72013E261CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72013E251CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard */; };
+		72013E291CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E281CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift */; };
+		72013E2B1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E2A1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift */; };
+		72013E2D1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E2C1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift */; };
 		724B4C1D1CF5529900C76CAE /* DCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */; };
 		7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5501C3B711700DC577B /* AppDelegate.swift */; };
 		7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5521C3B711700DC577B /* EntryTableViewController.swift */; };
@@ -73,6 +76,9 @@
 		64FB30601C477C2F00DBE79F /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 		72013E231CF5898700D17AD5 /* DCLineToGridAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCLineToGridAnimator.swift; sourceTree = "<group>"; };
 		72013E251CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColletionViewAnimations.storyboard; sourceTree = "<group>"; };
+		72013E281CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCFlowLayoutWithAnimations.swift; sourceTree = "<group>"; };
+		72013E2A1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSimpleDetailViewController.swift; sourceTree = "<group>"; };
+		72013E2C1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSimpleCollectionViewController.swift; sourceTree = "<group>"; };
 		724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDetailViewController.swift; sourceTree = "<group>"; };
 		7264A54D1C3B711700DC577B /* DemoCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7264A5501C3B711700DC577B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +219,9 @@
 			isa = PBXGroup;
 			children = (
 				72013E251CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard */,
+				72013E281CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift */,
+				72013E2A1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift */,
+				72013E2C1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift */,
 			);
 			name = CollectionViewAnimations;
 			sourceTree = "<group>";
@@ -375,6 +384,7 @@
 				72C35A7D1C48C3B80024C240 /* BounceMenuViewController.swift in Sources */,
 				72B7A02E1C3D36FA00723465 /* NewtownianCell.swift in Sources */,
 				7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */,
+				72013E291CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift in Sources */,
 				64FB305D1C47615200DBE79F /* Photo.swift in Sources */,
 				72B79FFE1C3BB61300723465 /* EntryDataSource.swift in Sources */,
 				72E2D69D1C43952D001D4F26 /* SampleCalendarEvent.swift in Sources */,
@@ -390,8 +400,10 @@
 				72F5B3E41CF45C1700FD612C /* DCCollectionDataSource.swift in Sources */,
 				72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */,
 				72E2D6991C439145001D4F26 /* CalendarEvent.swift in Sources */,
+				72013E2B1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift in Sources */,
 				72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */,
 				64FB30491C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift in Sources */,
+				72013E2D1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift in Sources */,
 				72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */,
 				64DCDD011CF52D6D006062AF /* DCContainerCell.swift in Sources */,
 				72C35A671C44EB540024C240 /* NewtownianLayoutAttributes.swift in Sources */,
