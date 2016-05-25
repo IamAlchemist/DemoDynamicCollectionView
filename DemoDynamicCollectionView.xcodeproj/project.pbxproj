@@ -19,6 +19,7 @@
 		64FB305D1C47615200DBE79F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FB305C1C47615200DBE79F /* Photo.swift */; };
 		64FB305F1C4762F000DBE79F /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64FB305E1C4762F000DBE79F /* Photos.plist */; };
 		64FB30611C477C2F00DBE79F /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FB30601C477C2F00DBE79F /* Photos.xcassets */; };
+		72013E241CF5898700D17AD5 /* DCLineToGridAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E231CF5898700D17AD5 /* DCLineToGridAnimator.swift */; };
 		724B4C1D1CF5529900C76CAE /* DCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */; };
 		7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5501C3B711700DC577B /* AppDelegate.swift */; };
 		7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5521C3B711700DC577B /* EntryTableViewController.swift */; };
@@ -69,6 +70,7 @@
 		64FB305C1C47615200DBE79F /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		64FB305E1C4762F000DBE79F /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		64FB30601C477C2F00DBE79F /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		72013E231CF5898700D17AD5 /* DCLineToGridAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCLineToGridAnimator.swift; sourceTree = "<group>"; };
 		724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDetailViewController.swift; sourceTree = "<group>"; };
 		7264A54D1C3B711700DC577B /* DemoDynamicCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDynamicCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7264A5501C3B711700DC577B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				648CB25F1CF528580045A202 /* DCRootViewController.swift */,
 				64DCDD001CF52D6D006062AF /* DCContainerCell.swift */,
 				724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */,
+				72013E231CF5898700D17AD5 /* DCLineToGridAnimator.swift */,
 			);
 			name = CollectionTransition;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */,
 				64DCDD011CF52D6D006062AF /* DCContainerCell.swift in Sources */,
 				72C35A671C44EB540024C240 /* NewtownianLayoutAttributes.swift in Sources */,
+				72013E241CF5898700D17AD5 /* DCLineToGridAnimator.swift in Sources */,
 				724B4C1D1CF5529900C76CAE /* DCDetailViewController.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,
 				72B7A02A1C3D35B500723465 /* NewtownianCollectionViewController.swift in Sources */,

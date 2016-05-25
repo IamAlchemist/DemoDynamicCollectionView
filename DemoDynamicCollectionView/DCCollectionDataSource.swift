@@ -36,6 +36,11 @@ class DCCollectionDataSource: NSObject, UICollectionViewDataSource {
         
         label?.text = "\(indexPath.section) - \(indexPath.row)"
         
+        cell.layer.borderColor = UIColor.yellowColor().CGColor
+        cell.layer.borderWidth = 1
+        
+        print("color cell size : \(cell.bounds.size)")
+        
         return cell
     }
 }

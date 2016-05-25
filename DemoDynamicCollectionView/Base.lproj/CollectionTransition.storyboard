@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -26,8 +27,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-Rb-QjS">
-                                            <rect key="frame" x="8" y="8" width="584" height="184"/>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-Rb-QjS">
+                                            <rect key="frame" x="8" y="8" width="304" height="184"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HoU-QU-ZPe">
                                                 <size key="itemSize" width="160" height="160"/>
                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -64,6 +65,12 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="NvR-Rb-QjS" secondAttribute="trailing" id="IZl-aB-DQy"/>
+                                    <constraint firstItem="NvR-Rb-QjS" firstAttribute="leading" secondItem="nzG-CI-HF4" secondAttribute="leadingMargin" id="OHo-X1-cbW"/>
+                                    <constraint firstItem="NvR-Rb-QjS" firstAttribute="top" secondItem="nzG-CI-HF4" secondAttribute="topMargin" id="jRd-Ph-g4p"/>
+                                    <constraint firstItem="NvR-Rb-QjS" firstAttribute="bottom" secondItem="nzG-CI-HF4" secondAttribute="bottomMargin" id="tY1-ki-IB4"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="collectionView" destination="NvR-Rb-QjS" id="tr2-NK-Svr"/>
                                 </connections>
