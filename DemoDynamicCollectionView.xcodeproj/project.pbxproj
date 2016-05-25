@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6482E0321C48CC0B00E3869E /* BounceContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6482E0311C48CC0B00E3869E /* BounceContentViewController.swift */; };
+		648CB2601CF528580045A202 /* DCRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648CB25F1CF528580045A202 /* DCRootViewController.swift */; };
+		64DCDD011CF52D6D006062AF /* DCContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DCDD001CF52D6D006062AF /* DCContainerCell.swift */; };
 		64FB30491C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FB30481C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift */; };
 		64FB30521C46941C00DBE79F /* Pinterest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64FB30501C46941C00DBE79F /* Pinterest.storyboard */; };
 		64FB30541C4698E100DBE79F /* PinterestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64FB30531C4698E100DBE79F /* PinterestCell.swift */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		6482E0311C48CC0B00E3869E /* BounceContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceContentViewController.swift; sourceTree = "<group>"; };
+		648CB25F1CF528580045A202 /* DCRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCRootViewController.swift; sourceTree = "<group>"; };
+		64DCDD001CF52D6D006062AF /* DCContainerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCContainerCell.swift; sourceTree = "<group>"; };
 		64FB30481C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewtownianAttachmentBehavior.swift; sourceTree = "<group>"; };
 		64FB30511C46941C00DBE79F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Pinterest.storyboard; sourceTree = "<group>"; };
 		64FB30531C4698E100DBE79F /* PinterestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinterestCell.swift; sourceTree = "<group>"; };
@@ -226,9 +230,9 @@
 				64FB304B1C4692B400DBE79F /* Menu */,
 				64FB304D1C4692D400DBE79F /* NewtownianCollectionView */,
 				64FB304E1C4692E900DBE79F /* Calendar */,
-				64FB304F1C46930400DBE79F /* Supports */,
-				72F5B3E21CF455C600FD612C /* CollectionTransition */,
 				64FB30551C4698F100DBE79F /* Pinterest */,
+				72F5B3E21CF455C600FD612C /* CollectionTransition */,
+				64FB304F1C46930400DBE79F /* Supports */,
 			);
 			path = DemoDynamicCollectionView;
 			sourceTree = "<group>";
@@ -257,6 +261,8 @@
 			children = (
 				72F5B3DF1CF4556400FD612C /* CollectionTransition.storyboard */,
 				72F5B3E31CF45C1700FD612C /* DCCollectionDataSource.swift */,
+				648CB25F1CF528580045A202 /* DCRootViewController.swift */,
+				64DCDD001CF52D6D006062AF /* DCContainerCell.swift */,
 			);
 			name = CollectionTransition;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				64FB305D1C47615200DBE79F /* Photo.swift in Sources */,
 				72B79FFE1C3BB61300723465 /* EntryDataSource.swift in Sources */,
 				72E2D69D1C43952D001D4F26 /* SampleCalendarEvent.swift in Sources */,
+				648CB2601CF528580045A202 /* DCRootViewController.swift in Sources */,
 				72B7A02C1C3D363800723465 /* NewtownianCollectionViewDataSource.swift in Sources */,
 				72E2D6A31C43A83E001D4F26 /* WeekCalendarLayout.swift in Sources */,
 				72B7A0041C3BC22600723465 /* SpringyCollectionViewController.swift in Sources */,
@@ -368,6 +375,7 @@
 				72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */,
 				64FB30491C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift in Sources */,
 				72E2D6951C438F90001D4F26 /* CalendarDataSource.swift in Sources */,
+				64DCDD011CF52D6D006062AF /* DCContainerCell.swift in Sources */,
 				72C35A671C44EB540024C240 /* NewtownianLayoutAttributes.swift in Sources */,
 				7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */,
 				72B7A02A1C3D35B500723465 /* NewtownianCollectionViewController.swift in Sources */,

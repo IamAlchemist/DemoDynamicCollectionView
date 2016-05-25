@@ -11,6 +11,14 @@ import UIKit
 class DCCollectionDataSource: NSObject, UICollectionViewDataSource {
     
     var numberOfItems : Int
+    var color : UIColor
+    
+    init(color : UIColor, numberOfItems: Int) {
+        self.color = color
+        self.numberOfItems = numberOfItems
+        
+        super.init()
+    }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1
@@ -21,6 +29,13 @@ class DCCollectionDataSource: NSObject, UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        <#code#>
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ColorCell", forIndexPath: indexPath)
+        cell.backgroundColor = color
+        
+        let label : UILabel? = cell.viewWithTag(2) as? UILabel
+        
+        label?.text = "\(indexPath.section) - \(indexPath.row)"
+        
+        return cell
     }
 }
