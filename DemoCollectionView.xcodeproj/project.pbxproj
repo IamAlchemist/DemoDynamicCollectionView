@@ -20,6 +20,7 @@
 		64FB305F1C4762F000DBE79F /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64FB305E1C4762F000DBE79F /* Photos.plist */; };
 		64FB30611C477C2F00DBE79F /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64FB30601C477C2F00DBE79F /* Photos.xcassets */; };
 		72013E241CF5898700D17AD5 /* DCLineToGridAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E231CF5898700D17AD5 /* DCLineToGridAnimator.swift */; };
+		72013E261CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72013E251CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard */; };
 		724B4C1D1CF5529900C76CAE /* DCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */; };
 		7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5501C3B711700DC577B /* AppDelegate.swift */; };
 		7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5521C3B711700DC577B /* EntryTableViewController.swift */; };
@@ -71,8 +72,9 @@
 		64FB305E1C4762F000DBE79F /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		64FB30601C477C2F00DBE79F /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 		72013E231CF5898700D17AD5 /* DCLineToGridAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCLineToGridAnimator.swift; sourceTree = "<group>"; };
+		72013E251CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ColletionViewAnimations.storyboard; sourceTree = "<group>"; };
 		724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDetailViewController.swift; sourceTree = "<group>"; };
-		7264A54D1C3B711700DC577B /* DemoDynamicCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoDynamicCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7264A54D1C3B711700DC577B /* DemoCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7264A5501C3B711700DC577B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7264A5521C3B711700DC577B /* EntryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewController.swift; sourceTree = "<group>"; };
 		7264A5551C3B711700DC577B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -207,11 +209,18 @@
 			name = Pinterest;
 			sourceTree = "<group>";
 		};
+		72013E271CF5A4FD00D17AD5 /* CollectionViewAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				72013E251CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard */,
+			);
+			name = CollectionViewAnimations;
+			sourceTree = "<group>";
+		};
 		7264A5441C3B711700DC577B = {
 			isa = PBXGroup;
 			children = (
 				7264A54F1C3B711700DC577B /* DemoDynamicCollectionView */,
-				7264A5541C3B711700DC577B /* Main.storyboard */,
 				7264A54E1C3B711700DC577B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -219,7 +228,7 @@
 		7264A54E1C3B711700DC577B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7264A54D1C3B711700DC577B /* DemoDynamicCollectionView.app */,
+				7264A54D1C3B711700DC577B /* DemoCollectionView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,6 +236,7 @@
 		7264A54F1C3B711700DC577B /* DemoDynamicCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				7264A5541C3B711700DC577B /* Main.storyboard */,
 				72C35A781C48C2A90024C240 /* BounceMenu */,
 				72C35A721C48971C0024C240 /* SnapDynamic */,
 				64FB304A1C46928100DBE79F /* SpringyCollectionView */,
@@ -236,6 +246,7 @@
 				64FB304E1C4692E900DBE79F /* Calendar */,
 				64FB30551C4698F100DBE79F /* Pinterest */,
 				72F5B3E21CF455C600FD612C /* CollectionTransition */,
+				72013E271CF5A4FD00D17AD5 /* CollectionViewAnimations */,
 				64FB304F1C46930400DBE79F /* Supports */,
 			);
 			path = DemoDynamicCollectionView;
@@ -276,9 +287,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7264A54C1C3B711700DC577B /* DemoDynamicCollectionView */ = {
+		7264A54C1C3B711700DC577B /* DemoCollectionView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7264A55F1C3B711700DC577B /* Build configuration list for PBXNativeTarget "DemoDynamicCollectionView" */;
+			buildConfigurationList = 7264A55F1C3B711700DC577B /* Build configuration list for PBXNativeTarget "DemoCollectionView" */;
 			buildPhases = (
 				7264A5491C3B711700DC577B /* Sources */,
 				7264A54A1C3B711700DC577B /* Frameworks */,
@@ -288,9 +299,9 @@
 			);
 			dependencies = (
 			);
-			name = DemoDynamicCollectionView;
+			name = DemoCollectionView;
 			productName = DemoDynamicCollectionView;
-			productReference = 7264A54D1C3B711700DC577B /* DemoDynamicCollectionView.app */;
+			productReference = 7264A54D1C3B711700DC577B /* DemoCollectionView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -308,7 +319,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7264A5481C3B711700DC577B /* Build configuration list for PBXProject "DemoDynamicCollectionView" */;
+			buildConfigurationList = 7264A5481C3B711700DC577B /* Build configuration list for PBXProject "DemoCollectionView" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -321,7 +332,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7264A54C1C3B711700DC577B /* DemoDynamicCollectionView */,
+				7264A54C1C3B711700DC577B /* DemoCollectionView */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72013E261CF5A4E100D17AD5 /* ColletionViewAnimations.storyboard in Resources */,
 				72C35A6F1C4896600024C240 /* Newtownian.storyboard in Resources */,
 				7264A55B1C3B711700DC577B /* LaunchScreen.storyboard in Resources */,
 				64FB30521C46941C00DBE79F /* Pinterest.storyboard in Resources */,
@@ -409,7 +421,6 @@
 				7264A5551C3B711700DC577B /* Base */,
 			);
 			name = Main.storyboard;
-			path = DemoDynamicCollectionView;
 			sourceTree = "<group>";
 		};
 		7264A5591C3B711700DC577B /* LaunchScreen.storyboard */ = {
@@ -551,7 +562,7 @@
 				INFOPLIST_FILE = DemoDynamicCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.DemoDynamicCollectionView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DemoCollectionView;
 			};
 			name = Debug;
 		};
@@ -562,14 +573,14 @@
 				INFOPLIST_FILE = DemoDynamicCollectionView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.morgenworks.DemoDynamicCollectionView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DemoCollectionView;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7264A5481C3B711700DC577B /* Build configuration list for PBXProject "DemoDynamicCollectionView" */ = {
+		7264A5481C3B711700DC577B /* Build configuration list for PBXProject "DemoCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7264A55D1C3B711700DC577B /* Debug */,
@@ -578,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7264A55F1C3B711700DC577B /* Build configuration list for PBXNativeTarget "DemoDynamicCollectionView" */ = {
+		7264A55F1C3B711700DC577B /* Build configuration list for PBXNativeTarget "DemoCollectionView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7264A5601C3B711700DC577B /* Debug */,
