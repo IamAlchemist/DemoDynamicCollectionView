@@ -24,6 +24,7 @@
 		72013E291CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E281CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift */; };
 		72013E2B1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E2A1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift */; };
 		72013E2D1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E2C1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift */; };
+		72013E2F1CF6CC1700D17AD5 /* DCCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72013E2E1CF6CC1700D17AD5 /* DCCollectionView.swift */; };
 		724B4C1D1CF5529900C76CAE /* DCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */; };
 		7264A5511C3B711700DC577B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5501C3B711700DC577B /* AppDelegate.swift */; };
 		7264A5531C3B711700DC577B /* EntryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7264A5521C3B711700DC577B /* EntryTableViewController.swift */; };
@@ -79,6 +80,7 @@
 		72013E281CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCFlowLayoutWithAnimations.swift; sourceTree = "<group>"; };
 		72013E2A1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSimpleDetailViewController.swift; sourceTree = "<group>"; };
 		72013E2C1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCSimpleCollectionViewController.swift; sourceTree = "<group>"; };
+		72013E2E1CF6CC1700D17AD5 /* DCCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCCollectionView.swift; sourceTree = "<group>"; };
 		724B4C1C1CF5529900C76CAE /* DCDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCDetailViewController.swift; sourceTree = "<group>"; };
 		7264A54D1C3B711700DC577B /* DemoCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7264A5501C3B711700DC577B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				72013E281CF5A92C00D17AD5 /* DCFlowLayoutWithAnimations.swift */,
 				72013E2A1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift */,
 				72013E2C1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift */,
+				72013E2E1CF6CC1700D17AD5 /* DCCollectionView.swift */,
 			);
 			name = CollectionViewAnimations;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				72B7A0261C3CEE5D00723465 /* SimpleDynamicViewController.swift in Sources */,
 				72E2D6991C439145001D4F26 /* CalendarEvent.swift in Sources */,
 				72013E2B1CF5A9BC00D17AD5 /* DCSimpleDetailViewController.swift in Sources */,
+				72013E2F1CF6CC1700D17AD5 /* DCCollectionView.swift in Sources */,
 				72E2D6971C4390F5001D4F26 /* CalendarEventCell.swift in Sources */,
 				64FB30491C4624AE00DBE79F /* NewtownianAttachmentBehavior.swift in Sources */,
 				72013E2D1CF5AA1600D17AD5 /* DCSimpleCollectionViewController.swift in Sources */,

@@ -8,14 +8,22 @@
 
 import UIKit
 
-enum DCColor {
-    case Red, Green, Blue
+enum DCColor : Int {
+    case Red = 0
+    case Green = 1
+    case Blue = 2
 }
 
 class DCSimpleDetailViewController : UICollectionViewController {
     
     var itemCount : Int = 0
     var color = DCColor.Red
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        print("view address \(unsafeAddressOf(collectionView!))")
+    }
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return 1

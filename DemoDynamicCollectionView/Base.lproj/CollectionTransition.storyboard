@@ -9,7 +9,7 @@
         <!--Root View Controller-->
         <scene sceneID="1U2-vX-fvn">
             <objects>
-                <collectionViewController id="nUu-HD-reT" customClass="DCRootViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="nUu-HD-reT" customClass="DCRootViewController" customModule="DemoCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rng-ls-ZZC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContainerCell" id="nzG-CI-HF4" customClass="DCContainerCell" customModule="DemoDynamicCollectionView" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContainerCell" id="nzG-CI-HF4" customClass="DCContainerCell" customModule="DemoCollectionView" customModuleProvider="target">
                                 <rect key="frame" x="140" y="0.0" width="320" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -89,7 +89,7 @@
         <!--Detail View Controller-->
         <scene sceneID="xET-m8-TX7">
             <objects>
-                <collectionViewController storyboardIdentifier="DCDetailViewController" id="l9o-nY-CS9" customClass="DCDetailViewController" customModule="DemoDynamicCollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="DCDetailViewController" id="l9o-nY-CS9" customClass="DCDetailViewController" customModule="DemoCollectionView" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="LMQ-6y-XDC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
